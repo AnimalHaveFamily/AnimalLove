@@ -10,6 +10,8 @@
 #import "UIViewController+addLeftOrRightBarButton.h"
 #import "UIViewController+PushViewControllerWithBarHidden.h"
 #import "MessageViewController.h"
+#import "HeaderReusableView.h"
+#import "MainCollectionViewCell.h"
 
 @interface MainViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 {
@@ -26,20 +28,29 @@
     [super viewDidLoad];
     self.navigationItem.title = @"服务";
     
+    
+    
     [self addRightBtnTitle:@"消息" action:@selector(rightmessageAction)];
+    
+    
+    
+    
 //    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, W, 200)];
 //    scroll.contentSize = CGSizeMake(3 * W, 200);
     layout = [[UICollectionViewFlowLayout alloc] init];
     
     maincollView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, W, H) collectionViewLayout:layout];
-    maincollView.backgroundColor = [UIColor redColor];
+    maincollView.backgroundColor = [UIColor cyanColor];
     maincollView.delegate = self;
     maincollView.dataSource = self;
     [self.view addSubview:maincollView];
     
-    [maincollView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
+    [maincollView registerNib:[UINib nibWithNibName:@"MainCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
     
-    [maincollView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+//    [maincollView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+    
+    [maincollView registerNib:[UINib nibWithNibName:@"HeaderReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+    
 
 }
 //- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -56,7 +67,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
+    MainCollectionViewCell *cell = (MainCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
 
     
     cell.backgroundColor = [UIColor yellowColor];
@@ -67,7 +78,7 @@
 //设置每个item的尺寸(代理方法实现的)
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(90, 130);
+    return CGSizeMake(130, 160);
 }
 
 
@@ -75,7 +86,7 @@
 //header的size（每一组头部的宽高）
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(0, 300);
+    return CGSizeMake(0, 400);
 }
 
 //设置每个item的UIEdgeInsets
@@ -101,8 +112,10 @@
 //通过设置SupplementaryViewOfKind 来设置头部或者底部的view，其中 ReuseIdentifier 的值必须和 注册是填写的一致，本例都为 “reusableView”
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-    headerView.backgroundColor =[UIColor grayColor];
+    HeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+    
+    headerView.backgroundColor = [UIColor orangeColor];
+   
 
     return headerView;
 }

@@ -1,5 +1,5 @@
 //
-//  BannerScrollView.h
+//  introduceCollectionViewCell.h
 //  宠爱有家
 //
 //  Created by XXXX on 16/5/6.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BannerScrollView : UIScrollView
+@interface introduceCollectionViewCell : UICollectionViewCell
 
 @end

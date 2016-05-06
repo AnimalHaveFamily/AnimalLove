@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="159"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="159"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eat_00" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-3o-iLD">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="121"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="121" id="BYw-so-KmF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzG-nY-lhY">
+                        <rect key="frame" x="0.0" y="121" width="180" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="7Lz-3o-iLD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="I5H-5g-hgv"/>
+                <constraint firstAttribute="trailing" secondItem="fzG-nY-lhY" secondAttribute="trailing" id="bKb-uI-wIK"/>
+                <constraint firstAttribute="bottom" secondItem="fzG-nY-lhY" secondAttribute="bottom" id="fWI-9d-upQ"/>
+                <constraint firstItem="fzG-nY-lhY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nTE-yD-pHe"/>
+                <constraint firstAttribute="trailing" secondItem="7Lz-3o-iLD" secondAttribute="trailing" id="onu-go-vsb"/>
+                <constraint firstItem="fzG-nY-lhY" firstAttribute="top" secondItem="7Lz-3o-iLD" secondAttribute="bottom" id="swZ-Ay-ZXx"/>
+                <constraint firstItem="7Lz-3o-iLD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xRK-4e-dUw"/>
+            </constraints>
+            <size key="customSize" width="180" height="159"/>
+            <point key="canvasLocation" x="211" y="227.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="eat_00" width="640" height="1024"/>
+    </resources>
+</document>

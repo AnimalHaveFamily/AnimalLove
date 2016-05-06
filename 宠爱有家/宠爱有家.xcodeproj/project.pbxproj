@@ -10,10 +10,12 @@
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
 		226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328311CDC2D3F00BB023B /* MessageViewController.m */; };
 		226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328341CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m */; };
-		2263283A1CDC370600BB023B /* BannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328391CDC370600BB023B /* BannerScrollView.m */; };
-		2263283C1CDC372B00BB023B /* BannerScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2263283B1CDC372B00BB023B /* BannerScrollView.xib */; };
 		226328401CDC3F2C00BB023B /* HeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263283E1CDC3F2C00BB023B /* HeaderReusableView.m */; };
 		226328411CDC3F2C00BB023B /* HeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2263283F1CDC3F2C00BB023B /* HeaderReusableView.xib */; };
+		226328451CDC6F2A00BB023B /* introduceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328431CDC6F2A00BB023B /* introduceCollectionViewCell.m */; };
+		226328461CDC6F2A00BB023B /* introduceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226328441CDC6F2A00BB023B /* introduceCollectionViewCell.xib */; };
+		2263284A1CDC76A800BB023B /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328481CDC76A800BB023B /* MainCollectionViewCell.m */; };
+		2263284B1CDC76A800BB023B /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226328491CDC76A800BB023B /* MainCollectionViewCell.xib */; };
 		22E7106C1CDB425400B584B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106B1CDB425400B584B5 /* main.m */; };
 		22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106E1CDB425400B584B5 /* AppDelegate.m */; };
 		22E710751CDB425400B584B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E710731CDB425400B584B5 /* Main.storyboard */; };
@@ -52,12 +54,15 @@
 		226328311CDC2D3F00BB023B /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		226328331CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PushViewControllerWithBarHidden.h"; sourceTree = "<group>"; };
 		226328341CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PushViewControllerWithBarHidden.m"; sourceTree = "<group>"; };
-		226328381CDC370600BB023B /* BannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerScrollView.h; sourceTree = "<group>"; };
-		226328391CDC370600BB023B /* BannerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerScrollView.m; sourceTree = "<group>"; };
-		2263283B1CDC372B00BB023B /* BannerScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerScrollView.xib; sourceTree = "<group>"; };
 		2263283D1CDC3F2C00BB023B /* HeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderReusableView.h; sourceTree = "<group>"; };
 		2263283E1CDC3F2C00BB023B /* HeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderReusableView.m; sourceTree = "<group>"; };
 		2263283F1CDC3F2C00BB023B /* HeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderReusableView.xib; sourceTree = "<group>"; };
+		226328421CDC6F2A00BB023B /* introduceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = introduceCollectionViewCell.h; sourceTree = "<group>"; };
+		226328431CDC6F2A00BB023B /* introduceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = introduceCollectionViewCell.m; sourceTree = "<group>"; };
+		226328441CDC6F2A00BB023B /* introduceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = introduceCollectionViewCell.xib; sourceTree = "<group>"; };
+		226328471CDC76A800BB023B /* MainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
+		226328481CDC76A800BB023B /* MainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
+		226328491CDC76A800BB023B /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 		22E710671CDB425400B584B5 /* 宠爱有家.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "宠爱有家.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E7106B1CDB425400B584B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22E7106D1CDB425400B584B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,12 +129,15 @@
 		226328371CDC361500BB023B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				226328381CDC370600BB023B /* BannerScrollView.h */,
-				226328391CDC370600BB023B /* BannerScrollView.m */,
-				2263283B1CDC372B00BB023B /* BannerScrollView.xib */,
 				2263283D1CDC3F2C00BB023B /* HeaderReusableView.h */,
 				2263283E1CDC3F2C00BB023B /* HeaderReusableView.m */,
 				2263283F1CDC3F2C00BB023B /* HeaderReusableView.xib */,
+				226328421CDC6F2A00BB023B /* introduceCollectionViewCell.h */,
+				226328431CDC6F2A00BB023B /* introduceCollectionViewCell.m */,
+				226328441CDC6F2A00BB023B /* introduceCollectionViewCell.xib */,
+				226328471CDC76A800BB023B /* MainCollectionViewCell.h */,
+				226328481CDC76A800BB023B /* MainCollectionViewCell.m */,
+				226328491CDC76A800BB023B /* MainCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -369,8 +377,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226328461CDC6F2A00BB023B /* introduceCollectionViewCell.xib in Resources */,
+				2263284B1CDC76A800BB023B /* MainCollectionViewCell.xib in Resources */,
 				22E7107A1CDB425400B584B5 /* LaunchScreen.storyboard in Resources */,
-				2263283C1CDC372B00BB023B /* BannerScrollView.xib in Resources */,
 				226328411CDC3F2C00BB023B /* HeaderReusableView.xib in Resources */,
 				22E710771CDB425400B584B5 /* Assets.xcassets in Resources */,
 				22E710751CDB425400B584B5 /* Main.storyboard in Resources */,
@@ -398,14 +407,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226328451CDC6F2A00BB023B /* introduceCollectionViewCell.m in Sources */,
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
-				2263283A1CDC370600BB023B /* BannerScrollView.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,
 				2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,
 				22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */,
 				226328401CDC3F2C00BB023B /* HeaderReusableView.m in Sources */,
 				22E710A71CDB43DC00B584B5 /* MainViewController.m in Sources */,
+				2263284A1CDC76A800BB023B /* MainCollectionViewCell.m in Sources */,
 				22E7106C1CDB425400B584B5 /* main.m in Sources */,
 				226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */,
 				22E710AD1CDB445A00B584B5 /* ServeViewController.m in Sources */,
