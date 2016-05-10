@@ -9,6 +9,7 @@
 #import "HeaderReusableView.h"
 #import "introduceCollectionViewCell.h"
 
+
 @implementation HeaderReusableView
 
 
@@ -31,65 +32,27 @@
     
     [self.introduceCollectionview registerNib:[UINib nibWithNibName:@"introduceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
     
-    self.photoArr = @[@"eat_00",@"pie_14",@"eat_02"];
-    self.bannerScrollView.contentSize = CGSizeMake(3 * W, 0);
-    self.bannerScrollView.delegate = self;
-    for (int i = 0; i < 3; i ++) {
-        _btn = [[UIButton alloc] initWithFrame:CGRectMake(W * i, 0, W, self.bannerScrollView.frame.size.height)];
-        [_btn setImage:[UIImage imageNamed:self.photoArr[i]] forState:UIControlStateNormal];
-        [self.bannerScrollView addSubview:_btn];
+   
 
-        _btn.tag = i;
-        
-        if (_btn.tag == 0) {
-          [self touchAction:@selector(action0)];
-        }
-        
-        if (_btn.tag == 1) {
-         [self touchAction:@selector(action1)];
-        }
-        
-        if (_btn.tag == 2) {
-            
-            [self touchAction:@selector(action2)];
-            
-        }
-    }
-    
-    timezone = 0;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(scrollTimer) userInfo:nil repeats:YES];
+    LCViewPagerView *viewPager = [[LCViewPagerView alloc] initWithFrame:CGRectMake(0, 0, self.bannerScrollView.frame.size.width, self.bannerScrollView.frame.size.height)];
+    viewPager.delegate = self;
+    viewPager.imageAry = @[@"eat_00",@"pie_14",@"eat_02"];
+    [self addSubview:viewPager];
 
 }
 
-- (void)scrollTimer{
-    
-
-//    NSLog(@"_timer == %ld",timezone);
-    timezone ++;
-    
-    if (timezone == 3) {
-        timezone = 0;
-    }
-
-   [_bannerScrollView setContentOffset:CGPointMake(timezone * W, 0) animated:YES];
-    
-    
-}
 
 - (void)touchAction:(SEL)action{
     
     [_btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)action0{
-    NSLog(@"0");
+
+- (void)didViewPagerViewClick:(NSInteger)tag
+{
+    NSLog(@"点击了第%ld张图片(long)",tag);
 }
-- (void)action1{
-    NSLog(@"1");
-}
-- (void)action2{
-        NSLog(@"2");
-}
+
 
 
 

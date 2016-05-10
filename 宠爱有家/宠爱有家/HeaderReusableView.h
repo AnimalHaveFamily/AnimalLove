@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LCViewPagerView.h"
 
-@interface HeaderReusableView : UICollectionReusableView<UIScrollViewDelegate>
+@interface HeaderReusableView : UICollectionReusableView <LCViewPagerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *bannerScrollView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *introduceCollectionview;
