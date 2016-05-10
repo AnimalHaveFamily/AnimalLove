@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    self.navigationItem.title = @"我的";
+    self.navigationItem.title = @"我的kkk";
 }
 
 - (void)didReceiveMemoryWarning {
