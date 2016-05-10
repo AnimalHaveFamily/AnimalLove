@@ -34,9 +34,7 @@
     
     
     
-    
-//    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, W, 200)];
-//    scroll.contentSize = CGSizeMake(3 * W, 200);
+
     layout = [[UICollectionViewFlowLayout alloc] init];
     
     maincollView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, W, H) collectionViewLayout:layout];
