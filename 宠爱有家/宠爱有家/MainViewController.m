@@ -12,8 +12,12 @@
 #import "MessageViewController.h"
 #import "HeaderReusableView.h"
 #import "MainCollectionViewCell.h"
+#import "BannerViewController.h"
+#import "UIViewController+PushViewControllerWithBarHidden.h"
+#import "leftBtnView.h"
+#import "LocationViewController.h"
 
-@interface MainViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface MainViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UISearchBarDelegate>
 {
     UICollectionView *maincollView;
     UICollectionViewFlowLayout *layout;
@@ -24,13 +28,25 @@
 
 @implementation MainViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"服务";
+  
+
+
+    [self addRightBtnImageName:@"nav_news_icon" action:@selector(rightmessageAction)];
+
+    [self creatSearchBtn];
+    [self createLocationBtn];
+
+    
+    
+
     
     
     
-    [self addRightBtnTitle:@"消息" action:@selector(rightmessageAction)];
+    
+
     
     
     
@@ -45,12 +61,41 @@
     
     [maincollView registerNib:[UINib nibWithNibName:@"MainCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
     
-//    [maincollView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+
     
     [maincollView registerNib:[UINib nibWithNibName:@"HeaderReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
     
 
+
 }
+
+- (void)creatSearchBtn{
+    
+
+    
+    UIView *titleview = [[[NSBundle mainBundle] loadNibNamed:@"SearchBackView" owner:nil options:nil] lastObject];
+    [titleview setBackgroundColor:Animalcolor];
+    [self.navigationItem.titleView sizeToFit];
+    self.navigationItem.titleView = titleview;
+    
+}
+- (void)createLocationBtn{
+    leftBtnView *view = [[[NSBundle mainBundle] loadNibNamed:@"leftBtnView" owner:nil options:nil] lastObject];
+    view.frame = CGRectMake(0, 0, 50, 30);
+    view.backgroundColor = Animalcolor;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
+    
+    typeof(self) myself = self;
+    view.LXPushMapBlock = ^(NSInteger a){
+        LocationViewController *mapvc = [[LocationViewController alloc] init];
+        [myself pushViewControllerWithTabBarHidden:mapvc];
+    };
+}
+
+
+
+
+
 //- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 //{
 //    return 1;
@@ -113,7 +158,12 @@
     HeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
     
     headerView.backgroundColor = [UIColor orangeColor];
-   
+    
+        typeof(self) myself = self;
+    headerView.LXPushBlock = ^(NSInteger a){
+        BannerViewController *banvc = [[BannerViewController alloc] init];
+        [myself pushViewControllerWithTabBarHidden:banvc];
+    };
 
     return headerView;
 }

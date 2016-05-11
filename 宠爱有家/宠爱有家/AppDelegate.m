@@ -33,6 +33,8 @@
     AnimalTabar *tabBar = [[AnimalTabar alloc] init];
     self.window.rootViewController = tabBar;
     
+
+    
     
     
     return YES;

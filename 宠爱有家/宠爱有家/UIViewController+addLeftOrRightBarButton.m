@@ -31,7 +31,7 @@
 
 //重置导航条右边的按钮（Image）
 - (void)addRightBtnImageName:(NSString *)imagename action:(SEL)action{
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:imagename] style:UIBarButtonItemStyleDone target:self action:action];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:imagename] style:UIBarButtonItemStyleDone target:self action:action];
 }
 
 

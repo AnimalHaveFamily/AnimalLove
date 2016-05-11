@@ -9,7 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "LCViewPagerView.h"
 
+typedef void(^PushBlock)(NSInteger tab);
+
+//@protocol LXPushDelegate <NSObject>
+//
+//- (void)pushAction:(NSInteger)tab;
+//@end
+
 @interface HeaderReusableView : UICollectionReusableView <LCViewPagerDelegate>
+
+@property (nonatomic,copy)PushBlock LXPushBlock;
+
 
 @property (weak, nonatomic) IBOutlet UIScrollView *bannerScrollView;
 
@@ -20,8 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *HealthBtn;
 
 @property (nonatomic,strong)UIButton *btn;
-@property (nonatomic,strong)NSArray *photoArr;
 
-@property (nonatomic,strong)NSTimer *timer;
+//@property (nonatomic, assign) id <LXPushDelegate> delegate;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *BnanerViewHeight;
 
 @end

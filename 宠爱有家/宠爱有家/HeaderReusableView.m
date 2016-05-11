@@ -8,6 +8,7 @@
 
 #import "HeaderReusableView.h"
 #import "introduceCollectionViewCell.h"
+//#import "BannerViewController.h"
 
 
 @implementation HeaderReusableView
@@ -32,12 +33,15 @@
     
     [self.introduceCollectionview registerNib:[UINib nibWithNibName:@"introduceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
     
-   
+
+    
 
     LCViewPagerView *viewPager = [[LCViewPagerView alloc] initWithFrame:CGRectMake(0, 0, self.bannerScrollView.frame.size.width, self.bannerScrollView.frame.size.height)];
     viewPager.delegate = self;
-    viewPager.imageAry = @[@"eat_00",@"pie_14",@"eat_02"];
+    viewPager.imageAry = @[@"con_banner1",@"con_banner2",@"con_banner3"];
     [self addSubview:viewPager];
+    
+
 
 }
 
@@ -48,9 +52,15 @@
 }
 
 
+
 - (void)didViewPagerViewClick:(NSInteger)tag
 {
+    
+    self.LXPushBlock(tag);
+
     NSLog(@"点击了第%ld张图片(long)",tag);
+    
+
 }
 
 

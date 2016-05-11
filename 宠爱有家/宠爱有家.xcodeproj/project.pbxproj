@@ -16,8 +16,17 @@
 		226328461CDC6F2A00BB023B /* introduceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226328441CDC6F2A00BB023B /* introduceCollectionViewCell.xib */; };
 		2263284A1CDC76A800BB023B /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328481CDC76A800BB023B /* MainCollectionViewCell.m */; };
 		2263284B1CDC76A800BB023B /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226328491CDC76A800BB023B /* MainCollectionViewCell.xib */; };
+		22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F1A1CE34ADB004D17B4 /* SearchBackView.m */; };
+		22845F1D1CE34AFD004D17B4 /* SearchBackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22845F1C1CE34AFD004D17B4 /* SearchBackView.xib */; };
+		22845F201CE35EAC004D17B4 /* leftBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F1F1CE35EAC004D17B4 /* leftBtnView.m */; };
+		22845F221CE35ED0004D17B4 /* leftBtnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22845F211CE35ED0004D17B4 /* leftBtnView.xib */; };
+		22845F251CE3690A004D17B4 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F241CE3690A004D17B4 /* LocationViewController.m */; };
+		22845F2E1CE37066004D17B4 /* LocationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F2C1CE37066004D17B4 /* LocationHeadView.m */; };
+		22845F2F1CE37066004D17B4 /* LocationHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22845F2D1CE37066004D17B4 /* LocationHeadView.xib */; };
 		22D29AD51CE1B7630096803A /* LCViewPagerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29AD21CE1B7630096803A /* LCViewPagerImageView.m */; };
 		22D29AD61CE1B7630096803A /* LCViewPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29AD41CE1B7630096803A /* LCViewPagerView.m */; };
+		22D29AD91CE1CC8F0096803A /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29AD81CE1CC8F0096803A /* BannerViewController.m */; };
+		22D29ADC1CE2013F0096803A /* AnimalSigle.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29ADB1CE2013F0096803A /* AnimalSigle.m */; };
 		22E7106C1CDB425400B584B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106B1CDB425400B584B5 /* main.m */; };
 		22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106E1CDB425400B584B5 /* AppDelegate.m */; };
 		22E710751CDB425400B584B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E710731CDB425400B584B5 /* Main.storyboard */; };
@@ -65,10 +74,25 @@
 		226328471CDC76A800BB023B /* MainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
 		226328481CDC76A800BB023B /* MainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
 		226328491CDC76A800BB023B /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		22845F191CE34ADB004D17B4 /* SearchBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBackView.h; sourceTree = "<group>"; };
+		22845F1A1CE34ADB004D17B4 /* SearchBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBackView.m; sourceTree = "<group>"; };
+		22845F1C1CE34AFD004D17B4 /* SearchBackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBackView.xib; sourceTree = "<group>"; };
+		22845F1E1CE35EAC004D17B4 /* leftBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftBtnView.h; sourceTree = "<group>"; };
+		22845F1F1CE35EAC004D17B4 /* leftBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftBtnView.m; sourceTree = "<group>"; };
+		22845F211CE35ED0004D17B4 /* leftBtnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = leftBtnView.xib; sourceTree = "<group>"; };
+		22845F231CE3690A004D17B4 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		22845F241CE3690A004D17B4 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		22845F2B1CE37066004D17B4 /* LocationHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHeadView.h; sourceTree = "<group>"; };
+		22845F2C1CE37066004D17B4 /* LocationHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHeadView.m; sourceTree = "<group>"; };
+		22845F2D1CE37066004D17B4 /* LocationHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationHeadView.xib; sourceTree = "<group>"; };
 		22D29AD11CE1B7630096803A /* LCViewPagerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCViewPagerImageView.h; sourceTree = "<group>"; };
 		22D29AD21CE1B7630096803A /* LCViewPagerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCViewPagerImageView.m; sourceTree = "<group>"; };
 		22D29AD31CE1B7630096803A /* LCViewPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCViewPagerView.h; sourceTree = "<group>"; };
 		22D29AD41CE1B7630096803A /* LCViewPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCViewPagerView.m; sourceTree = "<group>"; };
+		22D29AD71CE1CC8F0096803A /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		22D29AD81CE1CC8F0096803A /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		22D29ADA1CE2013F0096803A /* AnimalSigle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalSigle.h; sourceTree = "<group>"; };
+		22D29ADB1CE2013F0096803A /* AnimalSigle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalSigle.m; sourceTree = "<group>"; };
 		22E710671CDB425400B584B5 /* 宠爱有家.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "宠爱有家.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E7106B1CDB425400B584B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22E7106D1CDB425400B584B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +152,10 @@
 				22E710A61CDB43DC00B584B5 /* MainViewController.m */,
 				226328301CDC2D3F00BB023B /* MessageViewController.h */,
 				226328311CDC2D3F00BB023B /* MessageViewController.m */,
+				22D29AD71CE1CC8F0096803A /* BannerViewController.h */,
+				22D29AD81CE1CC8F0096803A /* BannerViewController.m */,
+				22845F231CE3690A004D17B4 /* LocationViewController.h */,
+				22845F241CE3690A004D17B4 /* LocationViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -144,6 +172,15 @@
 				226328471CDC76A800BB023B /* MainCollectionViewCell.h */,
 				226328481CDC76A800BB023B /* MainCollectionViewCell.m */,
 				226328491CDC76A800BB023B /* MainCollectionViewCell.xib */,
+				22845F191CE34ADB004D17B4 /* SearchBackView.h */,
+				22845F1A1CE34ADB004D17B4 /* SearchBackView.m */,
+				22845F1C1CE34AFD004D17B4 /* SearchBackView.xib */,
+				22845F1E1CE35EAC004D17B4 /* leftBtnView.h */,
+				22845F1F1CE35EAC004D17B4 /* leftBtnView.m */,
+				22845F211CE35ED0004D17B4 /* leftBtnView.xib */,
+				22845F2B1CE37066004D17B4 /* LocationHeadView.h */,
+				22845F2C1CE37066004D17B4 /* LocationHeadView.m */,
+				22845F2D1CE37066004D17B4 /* LocationHeadView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -225,6 +262,8 @@
 			children = (
 				22E7106D1CDB425400B584B5 /* AppDelegate.h */,
 				22E7106E1CDB425400B584B5 /* AppDelegate.m */,
+				22D29ADA1CE2013F0096803A /* AnimalSigle.h */,
+				22D29ADB1CE2013F0096803A /* AnimalSigle.m */,
 				22E710B11CDB44E700B584B5 /* AnimalPCH.pch */,
 				22E710731CDB425400B584B5 /* Main.storyboard */,
 				22E710761CDB425400B584B5 /* Assets.xcassets */,
@@ -397,8 +436,11 @@
 			files = (
 				226328461CDC6F2A00BB023B /* introduceCollectionViewCell.xib in Resources */,
 				2263284B1CDC76A800BB023B /* MainCollectionViewCell.xib in Resources */,
+				22845F221CE35ED0004D17B4 /* leftBtnView.xib in Resources */,
 				22E7107A1CDB425400B584B5 /* LaunchScreen.storyboard in Resources */,
+				22845F2F1CE37066004D17B4 /* LocationHeadView.xib in Resources */,
 				226328411CDC3F2C00BB023B /* HeaderReusableView.xib in Resources */,
+				22845F1D1CE34AFD004D17B4 /* SearchBackView.xib in Resources */,
 				22E710771CDB425400B584B5 /* Assets.xcassets in Resources */,
 				22E710751CDB425400B584B5 /* Main.storyboard in Resources */,
 			);
@@ -428,18 +470,24 @@
 				226328451CDC6F2A00BB023B /* introduceCollectionViewCell.m in Sources */,
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,
+				22845F2E1CE37066004D17B4 /* LocationHeadView.m in Sources */,
+				22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */,
 				2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,
 				22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */,
+				22D29AD91CE1CC8F0096803A /* BannerViewController.m in Sources */,
 				226328401CDC3F2C00BB023B /* HeaderReusableView.m in Sources */,
+				22845F201CE35EAC004D17B4 /* leftBtnView.m in Sources */,
 				22E710A71CDB43DC00B584B5 /* MainViewController.m in Sources */,
 				2263284A1CDC76A800BB023B /* MainCollectionViewCell.m in Sources */,
 				22E7106C1CDB425400B584B5 /* main.m in Sources */,
 				22D29AD51CE1B7630096803A /* LCViewPagerImageView.m in Sources */,
 				226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */,
 				22E710AD1CDB445A00B584B5 /* ServeViewController.m in Sources */,
+				22D29ADC1CE2013F0096803A /* AnimalSigle.m in Sources */,
 				22D29AD61CE1B7630096803A /* LCViewPagerView.m in Sources */,
 				22E710B41CDB46FA00B584B5 /* AnimalTabar.m in Sources */,
+				22845F251CE3690A004D17B4 /* LocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +634,7 @@
 				INFOPLIST_FILE = "宠爱有家/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = liuxindef;
+				PRODUCT_BUNDLE_IDENTIFIER = liuxindef.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -601,7 +649,7 @@
 				INFOPLIST_FILE = "宠爱有家/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = liuxindef;
+				PRODUCT_BUNDLE_IDENTIFIER = liuxindef.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

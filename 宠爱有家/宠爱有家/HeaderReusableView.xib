@@ -34,14 +34,6 @@
                         <outlet property="delegate" destination="U6b-Vx-4bR" id="KkI-gQ-hf5"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-14-j9Q">
-                    <rect key="frame" x="0.0" y="270" width="244" height="60"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="dw6-xC-rap"/>
-                    </constraints>
-                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="洗护"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJM-M8-yef">
                     <rect key="frame" x="244" y="270" width="243" height="60"/>
                     <constraints>
@@ -65,6 +57,14 @@
                     </constraints>
                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="更多"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-14-j9Q">
+                    <rect key="frame" x="0.0" y="270" width="244" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="dw6-xC-rap"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="洗护"/>
                 </button>
             </subviews>
             <constraints>
@@ -90,6 +90,7 @@
                 <constraint firstItem="DCb-gK-NYe" firstAttribute="width" secondItem="kdh-Gv-eii" secondAttribute="width" id="yBS-Br-6NT"/>
             </constraints>
             <connections>
+                <outlet property="BnanerViewHeight" destination="LIb-Da-g3a" id="SQw-sI-SBV"/>
                 <outlet property="HealthBtn" destination="kdh-Gv-eii" id="S2G-ht-Plf"/>
                 <outlet property="MoreBtn" destination="DCb-gK-NYe" id="XM4-AB-2jc"/>
                 <outlet property="bannerScrollView" destination="ZvK-9t-vob" id="Mng-yv-Ysh"/>
@@ -97,7 +98,7 @@
                 <outlet property="jiyangBtn" destination="dJM-M8-yef" id="Nxc-KT-xvF"/>
                 <outlet property="xihuBtn" destination="y9s-14-j9Q" id="958-GI-coY"/>
             </connections>
-            <point key="canvasLocation" x="171.5" y="313.5"/>
+            <point key="canvasLocation" x="140.5" y="305.5"/>
         </collectionReusableView>
     </objects>
 </document>

@@ -58,6 +58,7 @@
     self.scrollView.contentSize = CGSizeMake(kScreemWidth * kPagerNumber, 0);
     //设置轮播图的起始位置在contentView的中间
 //    self.scrollView.contentOffset = CGPointMake(kScreemWidth * kPagerNumber / 2, 0);
+    self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled = YES;
     self.curentCount = self.scrollView.contentOffset.x / kScreemWidth;
     self.scrollView.delegate = self;

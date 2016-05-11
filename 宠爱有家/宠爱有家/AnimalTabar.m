@@ -26,13 +26,13 @@
     self.view.tintColor = Animalcolor;
 
     
-    [self addTabBarWithViewController:[[MainViewController alloc] init] Title:@"首页" Image:@"one" selectImage:@"one"];
+    [self addTabBarWithViewController:[[MainViewController alloc] init] Title:@"首页" Image:@"tab_home_icon_nor" selectImage:@"tab_home_icon"];
     
-    [self addTabBarWithViewController:[[ShopViewController alloc] init] Title:@"商城" Image:@"one" selectImage:@"one"];
+    [self addTabBarWithViewController:[[ShopViewController alloc] init] Title:@"商城" Image:@"tab_shop_icon" selectImage:@"tab_shop_icon"];
     
-    [self addTabBarWithViewController:[[ServeViewController alloc] init] Title:@"服务" Image:@"one" selectImage:@"one"];
+    [self addTabBarWithViewController:[[ServeViewController alloc] init] Title:@"服务" Image:@"tab_pet_icon" selectImage:@"tab_pet_icon_nor"];
     
-    [self addTabBarWithViewController:[[SelfViewController alloc] init] Title:@"我的" Image:@"one" selectImage:@"one"];
+    [self addTabBarWithViewController:[[SelfViewController alloc] init] Title:@"我的" Image:@"tab_mine_icon" selectImage:@"tab_mine_icon_nor"];
     
     
 }
