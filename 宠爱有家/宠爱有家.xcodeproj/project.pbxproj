@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
 		226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328311CDC2D3F00BB023B /* MessageViewController.m */; };
 		226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328341CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m */; };
@@ -59,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03402C411CE216EF007B5323 /* YCSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSegment.h; sourceTree = "<group>"; };
+		03402C421CE216EF007B5323 /* YCSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSegment.m; sourceTree = "<group>"; };
 		2263282A1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+addLeftOrRightBarButton.h"; sourceTree = "<group>"; };
 		2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+addLeftOrRightBarButton.m"; sourceTree = "<group>"; };
 		226328301CDC2D3F00BB023B /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -145,6 +148,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03402BBF1CE1C3A9007B5323 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22E710AB1CDB445A00B584B5 /* ServeViewController.h */,
+				22E710AC1CDB445A00B584B5 /* ServeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		03402BC01CE1C3BA007B5323 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		03402BC11CE1C3C2007B5323 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		03402C401CE216AF007B5323 /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				03402C411CE216EF007B5323 /* YCSegment.h */,
+				03402C421CE216EF007B5323 /* YCSegment.m */,
+			);
+			name = Segment;
+			sourceTree = "<group>";
+		};
 		226328361CDC352700BB023B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,8 +320,10 @@
 		22E7109F1CDB42F700B584B5 /* 服务 */ = {
 			isa = PBXGroup;
 			children = (
-				22E710AB1CDB445A00B584B5 /* ServeViewController.h */,
-				22E710AC1CDB445A00B584B5 /* ServeViewController.m */,
+				03402C401CE216AF007B5323 /* Segment */,
+				03402BC11CE1C3C2007B5323 /* Model */,
+				03402BC01CE1C3BA007B5323 /* View */,
+				03402BBF1CE1C3A9007B5323 /* Controller */,
 			);
 			name = "服务";
 			sourceTree = "<group>";
@@ -474,6 +511,7 @@
 				22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */,
 				2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,
+				03402C431CE216EF007B5323 /* YCSegment.m in Sources */,
 				22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */,
 				22D29AD91CE1CC8F0096803A /* BannerViewController.m in Sources */,
 				226328401CDC3F2C00BB023B /* HeaderReusableView.m in Sources */,
