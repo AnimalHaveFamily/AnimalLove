@@ -27,12 +27,16 @@
 		22845F201CE35EAC004D17B4 /* leftBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F1F1CE35EAC004D17B4 /* leftBtnView.m */; };
 		22845F221CE35ED0004D17B4 /* leftBtnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22845F211CE35ED0004D17B4 /* leftBtnView.xib */; };
 		22845F251CE3690A004D17B4 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F241CE3690A004D17B4 /* LocationViewController.m */; };
-		22845F2E1CE37066004D17B4 /* LocationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F2C1CE37066004D17B4 /* LocationHeadView.m */; };
-		22845F2F1CE37066004D17B4 /* LocationHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22845F2D1CE37066004D17B4 /* LocationHeadView.xib */; };
+		22956CB71CE5A8E000A503E7 /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22956CB51CE5A8E000A503E7 /* LocationTableCell.m */; };
+		22956CB81CE5A8E000A503E7 /* LocationTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22956CB61CE5A8E000A503E7 /* LocationTableCell.xib */; };
+		22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22956CBA1CE5AB4A00A503E7 /* LocationHeadView.m */; };
+		22956CBD1CE5AB6100A503E7 /* LocationHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22956CBC1CE5AB6100A503E7 /* LocationHeadView.xib */; };
 		22D29AD51CE1B7630096803A /* LCViewPagerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29AD21CE1B7630096803A /* LCViewPagerImageView.m */; };
 		22D29AD61CE1B7630096803A /* LCViewPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29AD41CE1B7630096803A /* LCViewPagerView.m */; };
 		22D29AD91CE1CC8F0096803A /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29AD81CE1CC8F0096803A /* BannerViewController.m */; };
 		22D29ADC1CE2013F0096803A /* AnimalSigle.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D29ADB1CE2013F0096803A /* AnimalSigle.m */; };
+		22E40A241CE6BBCC00E64FFE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E40A231CE6BBCC00E64FFE /* libsqlite3.tbd */; };
+		22E40A261CE6D46500E64FFE /* city.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 22E40A251CE6D46500E64FFE /* city.sqlite */; };
 		22E7106C1CDB425400B584B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106B1CDB425400B584B5 /* main.m */; };
 		22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106E1CDB425400B584B5 /* AppDelegate.m */; };
 		22E710751CDB425400B584B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E710731CDB425400B584B5 /* Main.storyboard */; };
@@ -98,9 +102,12 @@
 		22845F211CE35ED0004D17B4 /* leftBtnView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = leftBtnView.xib; sourceTree = "<group>"; };
 		22845F231CE3690A004D17B4 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		22845F241CE3690A004D17B4 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
-		22845F2B1CE37066004D17B4 /* LocationHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHeadView.h; sourceTree = "<group>"; };
-		22845F2C1CE37066004D17B4 /* LocationHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHeadView.m; sourceTree = "<group>"; };
-		22845F2D1CE37066004D17B4 /* LocationHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationHeadView.xib; sourceTree = "<group>"; };
+		22956CB41CE5A8E000A503E7 /* LocationTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableCell.h; sourceTree = "<group>"; };
+		22956CB51CE5A8E000A503E7 /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
+		22956CB61CE5A8E000A503E7 /* LocationTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableCell.xib; sourceTree = "<group>"; };
+		22956CB91CE5AB4A00A503E7 /* LocationHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHeadView.h; sourceTree = "<group>"; };
+		22956CBA1CE5AB4A00A503E7 /* LocationHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHeadView.m; sourceTree = "<group>"; };
+		22956CBC1CE5AB6100A503E7 /* LocationHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationHeadView.xib; sourceTree = "<group>"; };
 		22D29AD11CE1B7630096803A /* LCViewPagerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCViewPagerImageView.h; sourceTree = "<group>"; };
 		22D29AD21CE1B7630096803A /* LCViewPagerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCViewPagerImageView.m; sourceTree = "<group>"; };
 		22D29AD31CE1B7630096803A /* LCViewPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCViewPagerView.h; sourceTree = "<group>"; };
@@ -109,6 +116,8 @@
 		22D29AD81CE1CC8F0096803A /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		22D29ADA1CE2013F0096803A /* AnimalSigle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalSigle.h; sourceTree = "<group>"; };
 		22D29ADB1CE2013F0096803A /* AnimalSigle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalSigle.m; sourceTree = "<group>"; };
+		22E40A231CE6BBCC00E64FFE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		22E40A251CE6D46500E64FFE /* city.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = city.sqlite; sourceTree = "<group>"; };
 		22E710671CDB425400B584B5 /* 宠爱有家.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "宠爱有家.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E7106B1CDB425400B584B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22E7106D1CDB425400B584B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E40A241CE6BBCC00E64FFE /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,9 +244,12 @@
 				22845F1E1CE35EAC004D17B4 /* leftBtnView.h */,
 				22845F1F1CE35EAC004D17B4 /* leftBtnView.m */,
 				22845F211CE35ED0004D17B4 /* leftBtnView.xib */,
-				22845F2B1CE37066004D17B4 /* LocationHeadView.h */,
-				22845F2C1CE37066004D17B4 /* LocationHeadView.m */,
-				22845F2D1CE37066004D17B4 /* LocationHeadView.xib */,
+				22956CB41CE5A8E000A503E7 /* LocationTableCell.h */,
+				22956CB51CE5A8E000A503E7 /* LocationTableCell.m */,
+				22956CB61CE5A8E000A503E7 /* LocationTableCell.xib */,
+				22956CB91CE5AB4A00A503E7 /* LocationHeadView.h */,
+				22956CBA1CE5AB4A00A503E7 /* LocationHeadView.m */,
+				22956CBC1CE5AB6100A503E7 /* LocationHeadView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -255,6 +268,8 @@
 		22E7105E1CDB425400B584B5 = {
 			isa = PBXGroup;
 			children = (
+				22E40A231CE6BBCC00E64FFE /* libsqlite3.tbd */,
+				22E40A251CE6D46500E64FFE /* city.sqlite */,
 				22E710691CDB425400B584B5 /* 宠爱有家 */,
 				22E710831CDB425400B584B5 /* 宠爱有家Tests */,
 				22E7108E1CDB425400B584B5 /* 宠爱有家UITests */,
@@ -494,11 +509,11 @@
 			files = (
 				226328461CDC6F2A00BB023B /* introduceCollectionViewCell.xib in Resources */,
 				2263284B1CDC76A800BB023B /* MainCollectionViewCell.xib in Resources */,
-				03A93B611CE6F69000A4DB5D /* YCView.xib in Resources */,
+				22956CB81CE5A8E000A503E7 /* LocationTableCell.xib in Resources */,
 				22845F221CE35ED0004D17B4 /* leftBtnView.xib in Resources */,
 				22E7107A1CDB425400B584B5 /* LaunchScreen.storyboard in Resources */,
-				22845F2F1CE37066004D17B4 /* LocationHeadView.xib in Resources */,
-				03B37D371CE60D9600FBDAF7 /* YCCell.xib in Resources */,
+				22956CBD1CE5AB6100A503E7 /* LocationHeadView.xib in Resources */,
+				22E40A261CE6D46500E64FFE /* city.sqlite in Resources */,
 				226328411CDC3F2C00BB023B /* HeaderReusableView.xib in Resources */,
 				22845F1D1CE34AFD004D17B4 /* SearchBackView.xib in Resources */,
 				22E710771CDB425400B584B5 /* Assets.xcassets in Resources */,
@@ -532,9 +547,9 @@
 				03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */,
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,
-				22845F2E1CE37066004D17B4 /* LocationHeadView.m in Sources */,
 				22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */,
 				2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */,
+				22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,
 				03402C431CE216EF007B5323 /* YCSegment.m in Sources */,
 				22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */,
@@ -547,6 +562,7 @@
 				22D29AD51CE1B7630096803A /* LCViewPagerImageView.m in Sources */,
 				226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */,
 				22E710AD1CDB445A00B584B5 /* ServeViewController.m in Sources */,
+				22956CB71CE5A8E000A503E7 /* LocationTableCell.m in Sources */,
 				22D29ADC1CE2013F0096803A /* AnimalSigle.m in Sources */,
 				22D29AD61CE1B7630096803A /* LCViewPagerView.m in Sources */,
 				22E710B41CDB46FA00B584B5 /* AnimalTabar.m in Sources */,
@@ -698,6 +714,10 @@
 				INFOPLIST_FILE = "宠爱有家/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/宠爱有家",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = liuxindef.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -713,6 +733,10 @@
 				INFOPLIST_FILE = "宠爱有家/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/宠爱有家",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = liuxindef.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

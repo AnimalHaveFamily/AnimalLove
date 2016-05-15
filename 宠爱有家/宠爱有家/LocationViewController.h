@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void (^Block)(NSString *string);
 
 @interface LocationViewController : UIViewController
+
+@property (nonatomic ,copy)Block MyBlock;
 
 @end

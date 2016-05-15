@@ -16,9 +16,7 @@
 
 
 - (void)awakeFromNib {
-    
-    
-    
+  
     self.xihuBtn.layer.borderWidth = 1.0;
     self.xihuBtn.layer.borderColor = [UIColor blackColor].CGColor;
     
