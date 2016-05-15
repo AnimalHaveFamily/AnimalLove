@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^PushMapBlock)(NSInteger tab);
+
 
 @interface leftBtnView : UIView
 @property (weak, nonatomic) IBOutlet UIButton *btn;
+@property (weak, nonatomic) IBOutlet UIButton *CityButton;
+//@property (nonatomic ,strong)LocationHeadView *headview;
 
-@property (nonatomic,copy)PushMapBlock LXPushMapBlock;
 
 @end

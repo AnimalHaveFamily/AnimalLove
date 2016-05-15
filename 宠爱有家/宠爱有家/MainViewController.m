@@ -80,16 +80,17 @@
     
 }
 - (void)createLocationBtn{
+    
     leftBtnView *view = [[[NSBundle mainBundle] loadNibNamed:@"leftBtnView" owner:nil options:nil] lastObject];
     view.frame = CGRectMake(0, 0, 50, 30);
     view.backgroundColor = Animalcolor;
+    
+    
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
     
-    typeof(self) myself = self;
-    view.LXPushMapBlock = ^(NSInteger a){
-        LocationViewController *mapvc = [[LocationViewController alloc] init];
-        [myself pushViewControllerWithTabBarHidden:mapvc];
-    };
+    
+    
 }
 
 

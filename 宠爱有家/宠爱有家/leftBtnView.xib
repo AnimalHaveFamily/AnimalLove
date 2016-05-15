@@ -23,7 +23,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgR-8X-HAl">
                     <rect key="frame" x="11" y="0.0" width="158" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="平顶山"/>
+                    <state key="normal" title="洛阳"/>
                     <connections>
                         <action selector="OtherAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="REL-5Z-GqT"/>
                     </connections>
@@ -41,6 +41,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="CityButton" destination="sgR-8X-HAl" id="2jF-kD-AAg"/>
                 <outlet property="btn" destination="ILI-GV-hPd" id="Snc-hX-4i4"/>
             </connections>
             <point key="canvasLocation" x="309.5" y="88"/>

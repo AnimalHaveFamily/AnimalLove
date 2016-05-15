@@ -7,17 +7,29 @@
 //
 
 #import "leftBtnView.h"
+#import "LocationHeadView.h"
+#import "LocationViewController.h"
 
 @implementation leftBtnView
 
 - (void)awakeFromNib{
     [self.btn setImage:[UIImage imageNamed:@"nav_location_icon"] forState:UIControlStateNormal];
+
+    
 }
 - (IBAction)LoacationAction:(id)sender {   
-    self.LXPushMapBlock(1);
+
 }
 - (IBAction)OtherAction:(id)sender {
-    self.LXPushMapBlock(1);
+    LocationViewController *locationVC = [[LocationViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:locationVC];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window.rootViewController presentViewController:nav animated:YES completion:nil];
+    
+    locationVC.MyBlock = ^(NSString *st){
+        
+        [self.CityButton setTitle:st forState:UIControlStateNormal];
+    };
 }
 
 
