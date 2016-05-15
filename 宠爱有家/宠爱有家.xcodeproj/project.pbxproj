@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
+		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
+		03A93B611CE6F69000A4DB5D /* YCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A93B601CE6F69000A4DB5D /* YCView.xib */; };
+		03B37D321CE60B6F00FBDAF7 /* YCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D311CE60B6F00FBDAF7 /* YCTableView.m */; };
+		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
+		03B37D371CE60D9600FBDAF7 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B37D351CE60D9600FBDAF7 /* YCCell.xib */; };
+		03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D391CE6154100FBDAF7 /* YCButtonView.m */; };
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
 		226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328311CDC2D3F00BB023B /* MessageViewController.m */; };
 		226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328341CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m */; };
@@ -66,6 +72,16 @@
 /* Begin PBXFileReference section */
 		03402C411CE216EF007B5323 /* YCSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSegment.h; sourceTree = "<group>"; };
 		03402C421CE216EF007B5323 /* YCSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSegment.m; sourceTree = "<group>"; };
+		03A93B5D1CE6F4C400A4DB5D /* YCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCView.h; sourceTree = "<group>"; };
+		03A93B5E1CE6F4C400A4DB5D /* YCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCView.m; sourceTree = "<group>"; };
+		03A93B601CE6F69000A4DB5D /* YCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCView.xib; sourceTree = "<group>"; };
+		03B37D301CE60B6F00FBDAF7 /* YCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTableView.h; sourceTree = "<group>"; };
+		03B37D311CE60B6F00FBDAF7 /* YCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTableView.m; sourceTree = "<group>"; };
+		03B37D331CE60D9600FBDAF7 /* YCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCell.h; sourceTree = "<group>"; };
+		03B37D341CE60D9600FBDAF7 /* YCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCell.m; sourceTree = "<group>"; };
+		03B37D351CE60D9600FBDAF7 /* YCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCCell.xib; sourceTree = "<group>"; };
+		03B37D381CE6154100FBDAF7 /* YCButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCButtonView.h; sourceTree = "<group>"; };
+		03B37D391CE6154100FBDAF7 /* YCButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCButtonView.m; sourceTree = "<group>"; };
 		2263282A1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+addLeftOrRightBarButton.h"; sourceTree = "<group>"; };
 		2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+addLeftOrRightBarButton.m"; sourceTree = "<group>"; };
 		226328301CDC2D3F00BB023B /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -170,6 +186,16 @@
 		03402BC01CE1C3BA007B5323 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03B37D301CE60B6F00FBDAF7 /* YCTableView.h */,
+				03B37D311CE60B6F00FBDAF7 /* YCTableView.m */,
+				03B37D331CE60D9600FBDAF7 /* YCCell.h */,
+				03B37D341CE60D9600FBDAF7 /* YCCell.m */,
+				03B37D351CE60D9600FBDAF7 /* YCCell.xib */,
+				03B37D381CE6154100FBDAF7 /* YCButtonView.h */,
+				03B37D391CE6154100FBDAF7 /* YCButtonView.m */,
+				03A93B5D1CE6F4C400A4DB5D /* YCView.h */,
+				03A93B5E1CE6F4C400A4DB5D /* YCView.m */,
+				03A93B601CE6F69000A4DB5D /* YCView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -521,10 +547,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */,
 				226328451CDC6F2A00BB023B /* introduceCollectionViewCell.m in Sources */,
+				03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */,
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,
 				22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */,
+				03B37D321CE60B6F00FBDAF7 /* YCTableView.m in Sources */,
 				2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */,
 				22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,
@@ -544,6 +573,7 @@
 				22D29AD61CE1B7630096803A /* LCViewPagerView.m in Sources */,
 				22E710B41CDB46FA00B584B5 /* AnimalTabar.m in Sources */,
 				22845F251CE3690A004D17B4 /* LocationViewController.m in Sources */,
+				03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

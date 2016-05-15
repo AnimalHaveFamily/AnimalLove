@@ -42,7 +42,7 @@
     
     _selectIdx = selectIdx;
     
-    self.underLayer.frame = CGRectMake(self.selectIdx * self.perWidth,H  - 5, self.perWidth, 5);
+    self.underLayer.frame = CGRectMake(self.selectIdx * self.perWidth,25, self.perWidth, 2);
     
     //每次重置标签索引，必须要重新画线
     [self setNeedsDisplay];
