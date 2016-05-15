@@ -8,7 +8,7 @@
 
 #import "ServeViewController.h"
 #import "YCSegment.h"
-#define kTableCell @tablecell
+
 
 
 @interface ServeViewController ()<UITableViewDataSource,UISearchResultsUpdating,UISearchBarDelegate>
@@ -24,6 +24,10 @@
 @property (nonatomic ,strong) YCSegment *segment;
 
 @property (nonatomic ,strong) UIView *MyView;
+
+@property (nonatomic ,strong) UIScrollView *MainScrollview;
+
+
 @end
 
 @implementation ServeViewController
@@ -44,7 +48,8 @@
         [self.dataArr addObject:[NSString stringWithFormat:@"%ld",(long)i]];
     }
     
-    self.MyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, 300)];
+    
+    self.MyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, H - 64)];
     self.tableView.tableHeaderView = self.MyView;
     
     
@@ -53,15 +58,15 @@
     self.SearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     
     //设置开始搜索时背景显示与否
-    self.SearchController.dimsBackgroundDuringPresentation = NO;
+    self.SearchController.dimsBackgroundDuringPresentation = YES;
     
     self.SearchController.hidesNavigationBarDuringPresentation = NO;
     
-    self.SearchController.searchBar.frame = CGRectMake(0,0,W,30);
+    self.SearchController.searchBar.frame = CGRectMake(0,0,W,40);
 
     [self.MyView addSubview:self.SearchController.searchBar];
     
-    YCSegment *segment = [[YCSegment alloc] initWithFrame:CGRectMake(0, 30, W , 40) withItems:@[@"全部",@"洗护",@"造型",@"绝育",@"寄养",@"体检",@"医疗"]];
+    YCSegment *segment = [[YCSegment alloc] initWithFrame:CGRectMake(0, 40, W , 50) withItems:@[@"全部",@"洗护",@"造型",@"绝育",@"寄养",@"体检",@"医疗"]];
     segment.segmentBgColor = [UIColor whiteColor];
     segment.defaultPerColor = [UIColor blackColor];
     segment.perColor = [UIColor redColor];
@@ -69,9 +74,12 @@
     segment.selectIdx = 0;
     
     [self.MyView addSubview:segment];
-
     
-}
+    self.MainScrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 90, 8 * W , H - 154)];
+    self.MainScrollview.backgroundColor = [UIColor whiteColor];
+
+    [self.MyView addSubview:self.MainScrollview];
+    }
 
 //设置区域的行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
