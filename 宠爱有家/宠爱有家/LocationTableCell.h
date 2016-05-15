@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LocationTableCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *cityLable;
 
 @end

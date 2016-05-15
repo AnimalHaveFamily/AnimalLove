@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="洛阳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKE-4W-tne">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKE-4W-tne">
                         <rect key="frame" x="18" y="8" width="150" height="27"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="gwc-72-HeV"/>
@@ -31,6 +31,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="fKE-4W-tne" secondAttribute="bottom" id="bfC-cb-T3q"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="cityLable" destination="fKE-4W-tne" id="YUG-AA-ZLv"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
