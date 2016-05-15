@@ -10,7 +10,6 @@
 		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
 		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
 		03A93B611CE6F69000A4DB5D /* YCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A93B601CE6F69000A4DB5D /* YCView.xib */; };
-		03B37D321CE60B6F00FBDAF7 /* YCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D311CE60B6F00FBDAF7 /* YCTableView.m */; };
 		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
 		03B37D371CE60D9600FBDAF7 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B37D351CE60D9600FBDAF7 /* YCCell.xib */; };
 		03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D391CE6154100FBDAF7 /* YCButtonView.m */; };
@@ -75,8 +74,6 @@
 		03A93B5D1CE6F4C400A4DB5D /* YCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCView.h; sourceTree = "<group>"; };
 		03A93B5E1CE6F4C400A4DB5D /* YCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCView.m; sourceTree = "<group>"; };
 		03A93B601CE6F69000A4DB5D /* YCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCView.xib; sourceTree = "<group>"; };
-		03B37D301CE60B6F00FBDAF7 /* YCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTableView.h; sourceTree = "<group>"; };
-		03B37D311CE60B6F00FBDAF7 /* YCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTableView.m; sourceTree = "<group>"; };
 		03B37D331CE60D9600FBDAF7 /* YCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCell.h; sourceTree = "<group>"; };
 		03B37D341CE60D9600FBDAF7 /* YCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCell.m; sourceTree = "<group>"; };
 		03B37D351CE60D9600FBDAF7 /* YCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCCell.xib; sourceTree = "<group>"; };
@@ -186,8 +183,6 @@
 		03402BC01CE1C3BA007B5323 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				03B37D301CE60B6F00FBDAF7 /* YCTableView.h */,
-				03B37D311CE60B6F00FBDAF7 /* YCTableView.m */,
 				03B37D331CE60D9600FBDAF7 /* YCCell.h */,
 				03B37D341CE60D9600FBDAF7 /* YCCell.m */,
 				03B37D351CE60D9600FBDAF7 /* YCCell.xib */,
@@ -553,7 +548,6 @@
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,
 				22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */,
-				03B37D321CE60B6F00FBDAF7 /* YCTableView.m in Sources */,
 				2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */,
 				22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,

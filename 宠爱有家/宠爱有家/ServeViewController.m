@@ -8,10 +8,10 @@
 
 #import "ServeViewController.h"
 #import "YCSegment.h"
+#import "YCView.h"
+#import "YCCell.h"
 
-
-
-@interface ServeViewController ()<UITableViewDataSource,UISearchResultsUpdating,UISearchBarDelegate>
+@interface ServeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong)NSMutableArray  *dataArr;
 
@@ -25,9 +25,9 @@
 
 @property (nonatomic ,strong) UIView *MyView;
 
-@property (nonatomic ,strong) UIScrollView *MainScrollview;
 
 
+@property (nonatomic ,strong) YCView *ycView;
 @end
 
 @implementation ServeViewController
@@ -38,6 +38,11 @@
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, W , H) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+    
+    
+    
     
     [self.view addSubview:self.tableView];
     
@@ -49,24 +54,28 @@
     }
     
     
-    self.MyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, H - 64)];
+    self.MyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, H - 108)];
     self.tableView.tableHeaderView = self.MyView;
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"YCCell" bundle:nil] forCellReuseIdentifier:@"YCCell"];
     
 
     
     self.SearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     
     //设置开始搜索时背景显示与否
-    self.SearchController.dimsBackgroundDuringPresentation = YES;
+    self.SearchController.dimsBackgroundDuringPresentation = NO;
+    
+    self.SearchController.hidesNavigationBarDuringPresentation = NO;
     
     self.SearchController.hidesNavigationBarDuringPresentation = NO;
     
     self.SearchController.searchBar.frame = CGRectMake(0,0,W,40);
+    
+    
 
     [self.MyView addSubview:self.SearchController.searchBar];
     
-    YCSegment *segment = [[YCSegment alloc] initWithFrame:CGRectMake(0, 40, W , 50) withItems:@[@"全部",@"洗护",@"造型",@"绝育",@"寄养",@"体检",@"医疗"]];
+    YCSegment *segment = [[YCSegment alloc] initWithFrame:CGRectMake(0, 40, W , 30) withItems:@[@"全部",@"洗护",@"造型",@"绝育",@"寄养",@"体检",@"医疗"]];
     segment.segmentBgColor = [UIColor whiteColor];
     segment.defaultPerColor = [UIColor blackColor];
     segment.perColor = [UIColor redColor];
@@ -75,63 +84,42 @@
     
     [self.MyView addSubview:segment];
     
-    self.MainScrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 90, 8 * W , H - 154)];
-    self.MainScrollview.backgroundColor = [UIColor whiteColor];
+   
 
-    [self.MyView addSubview:self.MainScrollview];
+    _ycView = [[[NSBundle mainBundle] loadNibNamed:@"YCView" owner:nil options:nil] lastObject];
+    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+   
+    _ycView.frame = (CGRect){0, 110 ,   W,  H - 258};
+    [self.MyView addSubview:_ycView];
     }
 
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 30;
+}
 //设置区域的行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    if (self.SearchController.active) {
-        return [self.searchArr count];
-    }else{
-        return [self.dataArr count];
-    }
-    
+    return 1;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 5;
+}
+
+
 
 //返回显示cell内容
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *indentifier=@"cell";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:indentifier];
-    if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indentifier];
-    }
-    
-    
-    if (self.SearchController.active) {
-        [cell.textLabel setText:self.searchArr[indexPath.row]];
-            }
-    else{
-        [cell.textLabel setText:self.dataArr[indexPath.row]];
-        
-    }
+    YCCell *cell =[tableView dequeueReusableCellWithIdentifier:@"YCCell" forIndexPath:indexPath];
+
     return cell;
 }
 
--(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    
-    NSString *searchString = [self.SearchController.searchBar text];
-    
-    NSPredicate *preicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", searchString];
-    
-    if (self.searchArr!= nil) {
-        
-        [self.searchArr removeAllObjects];
-        
-        NSLog(@"#####");
-    }
-    
-    //过滤数据
-    self.searchArr= [NSMutableArray arrayWithArray:[self.dataArr filteredArrayUsingPredicate:preicate]];
-    
-    //刷新表格
-    [self.tableView reloadData];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 114;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
