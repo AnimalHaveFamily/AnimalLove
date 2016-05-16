@@ -49,8 +49,6 @@ sqlite3 *_db = NULL;
     [self CreatSqlite];
     
     [_LocationTableView registerNib:[UINib nibWithNibName:@"LocationTableCell" bundle:nil] forCellReuseIdentifier:@"Locationcell"];
-    
-
 }
 
 
