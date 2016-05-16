@@ -14,9 +14,14 @@
 
 
 @interface LocationViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
+{
+    LocationTableCell *cell;
+}
 
 @property (nonatomic ,strong)UITableView *LocationTableView;
 @property (nonatomic ,strong)NSMutableArray *CityArr;
+@property (nonatomic ,strong)NSMutableArray *MainArr;
+
 
 
 @end
@@ -25,71 +30,138 @@
 
 sqlite3 *_db = NULL;
 
-- (NSMutableArray *)CityArr{
-    if (!_CityArr) {
-        _CityArr = [[NSMutableArray alloc] initWithCapacity:0];
-    }
-    return _CityArr;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"选择地区";
     
     [self addLeftBtnImageName:@"nav_search_icon" action:@selector(BackAction)];
-    
+    _MainArr = [[NSMutableArray alloc] initWithCapacity:0];
     
  
     _LocationTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0 ,W , H) style:UITableViewStyleGrouped];
     _LocationTableView.delegate = self;
     _LocationTableView.dataSource = self;
     [self.view addSubview:_LocationTableView];
+   
     
-  
     [self setHeadView];
+    [self CreatSqlite];
     
     [_LocationTableView registerNib:[UINib nibWithNibName:@"LocationTableCell" bundle:nil] forCellReuseIdentifier:@"Locationcell"];
     
+
+}
+
+
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 15;
+}
+
+-(nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSDictionary *tempDict = _MainArr[section];
+    NSString *proName = [tempDict objectForKey:@"proName"];
+    return proName;
+}
+
+//设置组数
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return _MainArr.count;
+}
+
+//设置行数
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    NSDictionary *tempDict = _MainArr[section];
+    NSArray *cityAr = [tempDict objectForKey:@"cityAry"];
+    return cityAr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    cell = [tableView dequeueReusableCellWithIdentifier:@"Locationcell"];
+    NSDictionary *tempDict = _MainArr[indexPath.section];
+    NSArray *cityAry = [tempDict objectForKey:@"cityAry"];
+    NSString *cityName = cityAry[indexPath.row];
+    cell.cityLable.text = cityName;
+    self.MyBlock(cityName);
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    
+    
+}
+
+- (void)CreatSqlite{
     NSString *filePath = @"/Users/xxxx/Desktop/AnimalLove/宠爱有家/city.sqlite";
-    
-    
     
     int open = sqlite3_open(filePath.UTF8String, &_db);
     if (open == SQLITE_OK) {
         NSLog(@"打开成功");
-    
-    }
-    
-    char *sql = "select CityName from T_City where ProID = 16";
-    sqlite3_stmt *stmt = NULL;
-    
-    
-    int perpare = sqlite3_prepare_v2(_db, sql, -1, &stmt, NULL);
-    
-    
-    if (perpare == SQLITE_OK) {
-        NSLog(@"查询成功");
         
-        //sqlite3_step：按照顺序执行
-        //SQLITE_ROW：是一个合法可执行状态
-        while (sqlite3_step(stmt) == SQLITE_ROW) {
-            
-            //获取结果集中所对应的值，0是对应的列
-            //代表的是设置的查询条件的顺序
-            
-
-            char *_id = (char *)sqlite3_column_text(stmt, 0);
-            
-            NSString *str = [NSString stringWithUTF8String:_id];
-            
-            [_CityArr addObject:str];
-            
-           
-        }
     }
-    //别忘了结束结果集合
-    sqlite3_finalize(stmt);
+    
+    char *selectProvinceStr = "select * from T_Province";
+    
+    
+    sqlite3_stmt *proStmt = NULL;
+    sqlite3_stmt *cityStmt = NULL;
+    
+    int temp = sqlite3_prepare_v2(_db, selectProvinceStr, -1, &proStmt, NULL);
+    //省份查询
+    if (temp == SQLITE_OK)
+    {
+        while (sqlite3_step(proStmt) == SQLITE_ROW) {
+            NSMutableDictionary *proDict = [NSMutableDictionary new];
+            char *proChar = (char *)sqlite3_column_text(proStmt, 0);
+            //0代表该表里面的第1列
+            
+            NSString *proName = [NSString stringWithUTF8String:proChar];
+            
+            
+            [proDict setObject:proName forKey:@"proName"];
+            
+            char *proIdChar = (char *)sqlite3_column_text(proStmt, 1);
+            //1代表该表里面的第2列
+            
+            NSString *proIdStr =[NSString stringWithUTF8String:proIdChar];
+            
+            //            NSLog(@"proIdStr == %@",proIdStr);
+            
+            
+            //市区查询
+            NSString *str = [NSString stringWithFormat:@"select CityName from T_City where ProID = %@",proIdStr];
+            const char *selectCitySql = str.UTF8String;
+            int perpare = sqlite3_prepare_v2(_db, selectCitySql, -1, &cityStmt, NULL);
+            _CityArr = [[NSMutableArray alloc] initWithCapacity:0];
+            //因为每个省都有一个数组，如果放到上面初始化，会把所有的都加载在一个数组里面
+            if (perpare == SQLITE_OK) {
+                //sqlite3_step：按照顺序执行
+                //SQLITE_ROW：是一个合法可执行状态
+                while (sqlite3_step(cityStmt) == SQLITE_ROW) {
+                    
+                    char *_id = (char *)sqlite3_column_text(cityStmt, 0);
+                    NSString *str = [NSString stringWithUTF8String:_id];
+                    
+                    [_CityArr addObject:str];
+                    [proDict setObject:_CityArr forKey:@"cityAry"];
+                }
+            }
+            [_MainArr addObject:proDict];
+        }
+        //别忘了结束结果集合
+        sqlite3_finalize(cityStmt);
+        sqlite3_finalize(proStmt);
+    }
+    //    NSLog(@"_MainArr == %@",_MainArr);
+    
 }
+
+
 
 - (void)setHeadView{
     LocationHeadView *headview = [[[NSBundle mainBundle] loadNibNamed:@"LocationHeadView" owner:nil options:nil] lastObject];
@@ -100,31 +172,6 @@ sqlite3 *_db = NULL;
         self.MyBlock(str);
         
     };
-}
-
-
--(nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return @[@"第一组",@"第二组",@"第三组",@"第四组",@"第五组",@"第一组",@"第二组",@"第三组",@"第四组",@"第五组"][section];
-}
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 10;
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 25;
-    
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    LocationTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Locationcell"];
-    
-    cell.textLabel.text = _CityArr[indexPath.row];
-    return cell;
-    
-    
 }
 
 - (void)BackAction{
