@@ -13,9 +13,9 @@
 
 @interface ServeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong)NSMutableArray  *dataArr;
+@property (nonatomic, strong)NSMutableArray  *dataArray;
 
-@property (nonatomic, strong)NSMutableArray  *searchArr;
+@property (nonatomic, strong)NSMutableArray  *filteredArray;
 
 @property (nonatomic, strong)UITableView *tableView;
 
@@ -24,6 +24,7 @@
 @property (nonatomic ,strong) YCSegment *segment;
 
 @property (nonatomic ,strong) UIView *MyView;
+
 
 
 
