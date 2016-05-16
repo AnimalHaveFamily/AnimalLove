@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
+		037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037388D91CE9A5C500574E28 /* YCCell.xib */; };
 		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
-		03A93B611CE6F69000A4DB5D /* YCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A93B601CE6F69000A4DB5D /* YCView.xib */; };
 		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
-		03B37D371CE60D9600FBDAF7 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B37D351CE60D9600FBDAF7 /* YCCell.xib */; };
 		03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D391CE6154100FBDAF7 /* YCButtonView.m */; };
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
 		226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328311CDC2D3F00BB023B /* MessageViewController.m */; };
@@ -71,12 +70,11 @@
 /* Begin PBXFileReference section */
 		03402C411CE216EF007B5323 /* YCSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSegment.h; sourceTree = "<group>"; };
 		03402C421CE216EF007B5323 /* YCSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSegment.m; sourceTree = "<group>"; };
+		037388D91CE9A5C500574E28 /* YCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCCell.xib; sourceTree = "<group>"; };
 		03A93B5D1CE6F4C400A4DB5D /* YCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCView.h; sourceTree = "<group>"; };
 		03A93B5E1CE6F4C400A4DB5D /* YCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCView.m; sourceTree = "<group>"; };
-		03A93B601CE6F69000A4DB5D /* YCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCView.xib; sourceTree = "<group>"; };
 		03B37D331CE60D9600FBDAF7 /* YCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCell.h; sourceTree = "<group>"; };
 		03B37D341CE60D9600FBDAF7 /* YCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCell.m; sourceTree = "<group>"; };
-		03B37D351CE60D9600FBDAF7 /* YCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCCell.xib; sourceTree = "<group>"; };
 		03B37D381CE6154100FBDAF7 /* YCButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCButtonView.h; sourceTree = "<group>"; };
 		03B37D391CE6154100FBDAF7 /* YCButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCButtonView.m; sourceTree = "<group>"; };
 		2263282A1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+addLeftOrRightBarButton.h"; sourceTree = "<group>"; };
@@ -185,12 +183,11 @@
 			children = (
 				03B37D331CE60D9600FBDAF7 /* YCCell.h */,
 				03B37D341CE60D9600FBDAF7 /* YCCell.m */,
-				03B37D351CE60D9600FBDAF7 /* YCCell.xib */,
+				037388D91CE9A5C500574E28 /* YCCell.xib */,
 				03B37D381CE6154100FBDAF7 /* YCButtonView.h */,
 				03B37D391CE6154100FBDAF7 /* YCButtonView.m */,
 				03A93B5D1CE6F4C400A4DB5D /* YCView.h */,
 				03A93B5E1CE6F4C400A4DB5D /* YCView.m */,
-				03A93B601CE6F69000A4DB5D /* YCView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -510,6 +507,7 @@
 				226328461CDC6F2A00BB023B /* introduceCollectionViewCell.xib in Resources */,
 				2263284B1CDC76A800BB023B /* MainCollectionViewCell.xib in Resources */,
 				22956CB81CE5A8E000A503E7 /* LocationTableCell.xib in Resources */,
+				037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */,
 				22845F221CE35ED0004D17B4 /* leftBtnView.xib in Resources */,
 				22E7107A1CDB425400B584B5 /* LaunchScreen.storyboard in Resources */,
 				22956CBD1CE5AB6100A503E7 /* LocationHeadView.xib in Resources */,
