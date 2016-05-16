@@ -12,6 +12,7 @@
 		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
 		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
 		03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D391CE6154100FBDAF7 /* YCButtonView.m */; };
+		03B867B31CE9E23500706901 /* YMCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B867B21CE9E23500706901 /* YMCView.xib */; };
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
 		226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328311CDC2D3F00BB023B /* MessageViewController.m */; };
 		226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328341CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m */; };
@@ -77,6 +78,7 @@
 		03B37D341CE60D9600FBDAF7 /* YCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCell.m; sourceTree = "<group>"; };
 		03B37D381CE6154100FBDAF7 /* YCButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCButtonView.h; sourceTree = "<group>"; };
 		03B37D391CE6154100FBDAF7 /* YCButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCButtonView.m; sourceTree = "<group>"; };
+		03B867B21CE9E23500706901 /* YMCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCView.xib; sourceTree = "<group>"; };
 		2263282A1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+addLeftOrRightBarButton.h"; sourceTree = "<group>"; };
 		2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+addLeftOrRightBarButton.m"; sourceTree = "<group>"; };
 		226328301CDC2D3F00BB023B /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				03B37D391CE6154100FBDAF7 /* YCButtonView.m */,
 				03A93B5D1CE6F4C400A4DB5D /* YCView.h */,
 				03A93B5E1CE6F4C400A4DB5D /* YCView.m */,
+				03B867B21CE9E23500706901 /* YMCView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				22845F1D1CE34AFD004D17B4 /* SearchBackView.xib in Resources */,
 				22E710771CDB425400B584B5 /* Assets.xcassets in Resources */,
 				22E710751CDB425400B584B5 /* Main.storyboard in Resources */,
+				03B867B31CE9E23500706901 /* YMCView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
