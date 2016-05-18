@@ -10,6 +10,7 @@
 #import "YCSegment.h"
 #import "YCView.h"
 #import "YCCell.h"
+#import "FujinView.h"
 
 @interface ServeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -27,7 +28,7 @@
 
 
 
-
+@property (nonatomic ,strong) FujinView *fujin;
 @property (nonatomic ,strong) YCView *ycView;
 @end
 
@@ -41,7 +42,6 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
-    
     
     
     
@@ -86,8 +86,21 @@
 
     _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
    
-    _ycView.frame = (CGRect){0, 110 ,   W,  H - 258};
+    _ycView.frame = (CGRect){0, 90 ,   W,  H - 258};
     [self.MyView addSubview:_ycView];
+    
+    
+    NSString *indenone = @"FujinView";
+    
+    _fujin = kLoadViewWithNIB(indenone);
+    
+    _fujin.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+    
+    _fujin.frame = (CGRect){0, H - 143, W , 30};
+    [self.MyView addSubview:_fujin];
+    
+    
+    
     
     }
 
@@ -103,7 +116,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0)
+    {
+        return CGFLOAT_MIN;
+    }
+    else{
     return 5;
+    }
 }
 
 
