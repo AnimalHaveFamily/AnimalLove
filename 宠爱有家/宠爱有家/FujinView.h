@@ -10,4 +10,7 @@
 
 @interface FujinView : UIView
 
+@property (weak, nonatomic) IBOutlet UIButton *SeeMore;
+
+
 @end

@@ -11,7 +11,9 @@
 #import "YCView.h"
 #import "YCCell.h"
 #import "FujinView.h"
-
+#import "YCViewController.h"
+#import "UIViewController+PushViewControllerWithBarHidden.h"
+#import "UIViewController+addLeftOrRightBarButton.h"
 @interface ServeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong)NSMutableArray  *dataArray;
@@ -34,10 +36,20 @@
 
 @implementation ServeViewController
 
+- (void)SeeMoreAct
+{
+    [self pushViewControllerWithTabBarHidden:[[YCViewController alloc] init]];
+
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"服务";
     
+    
+    [self addRightBtnImageName:@"dian" action:@selector(SeeMoreAct)];
+
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, W , H) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -94,15 +106,13 @@
     
     _fujin = kLoadViewWithNIB(indenone);
     
-    _fujin.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+    _fujin.backgroundColor = [UIColor whiteColor];
     
-    _fujin.frame = (CGRect){0, H - 143, W , 30};
+    _fujin.frame = (CGRect){0, H - 140, W , 30};
+    
+    
     [self.MyView addSubview:_fujin];
-    
-    
-    
-    
-    }
+     }
 
 
 
