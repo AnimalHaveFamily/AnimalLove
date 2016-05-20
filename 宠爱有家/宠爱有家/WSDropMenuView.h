@@ -10,8 +10,8 @@
 
 #define WSNoFound (-1)
 
-#define LeftButtonTitle @"左边"
-#define RightButtonTitle @"右边"
+#define LeftButtonTitle @"分类"
+#define RightButtonTitle @"离我最近"
 
 
 /**
