@@ -59,7 +59,6 @@
     
     [self.view addSubview:self.tableView];
     
-
     self.MyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, H - 108)];
     self.tableView.tableHeaderView = self.MyView;
     

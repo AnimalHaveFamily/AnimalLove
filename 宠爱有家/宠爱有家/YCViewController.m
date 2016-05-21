@@ -26,6 +26,16 @@
     
     self.navigationItem.title = @"商店列表";
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    _YcTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, W , H - 100) style:UITableViewStylePlain];
+    _YcTableView.dataSource = self;
+    _YcTableView.delegate = self;
+    [self.view addSubview:_YcTableView];
+    
+    [self.YcTableView registerNib:[UINib nibWithNibName:@"YCCell" bundle:nil] forCellReuseIdentifier:@"YCCell"];
+
+    
+    
     WSDropMenuView *dropMenu = [[WSDropMenuView alloc] initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 40)];
     dropMenu.dataSource = self;
     dropMenu.delegate  =self;
@@ -38,14 +48,9 @@
     
     LiArray = @[@"离我最近",@"认证商户",@"人气由高到低",@"明星商户"];
     
-    _YcTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, W , H - 100) style:UITableViewStylePlain];
-    _YcTableView.dataSource = self;
-    _YcTableView.delegate = self;
     
-    [self.view addSubview:_YcTableView];
     
-     [self.YcTableView registerNib:[UINib nibWithNibName:@"YCCell" bundle:nil] forCellReuseIdentifier:@"YCCell"];
-    
+   
 }
 
 
@@ -121,13 +126,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0)
-    {
-        return CGFLOAT_MIN;
-    }
-    else{
-        return 5;
-    }
+    return 5;
 }
 
 

@@ -108,6 +108,7 @@ static NSString *cellIdent = @"cellIdent";
 - (void)_setButton{
     self.leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.leftButton.frame = CGRectMake(0, 0, Main_Screen_Width/2, KTopButtonHeight);
+    self.leftButton.backgroundColor = [UIColor whiteColor];
     [self.leftButton setTitle:LeftButtonTitle forState:UIControlStateNormal];
     [self.leftButton setTitleColor:[UIColor colorWithWhite:0.004 alpha:1.000] forState:UIControlStateNormal];
     self.leftButton.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -120,6 +121,7 @@ static NSString *cellIdent = @"cellIdent";
     
     self.rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightButton .frame = CGRectMake(CGRectGetMaxX(self.leftButton .frame)+1, 0, Main_Screen_Width/2, KTopButtonHeight);
+    self.rightButton.backgroundColor = [UIColor whiteColor];
     [self.rightButton  setTitle:RightButtonTitle forState:UIControlStateNormal];
     [self.rightButton  addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.rightButton setTitleColor:[UIColor colorWithWhite:0.004 alpha:1.000]  forState:UIControlStateNormal];
@@ -154,6 +156,7 @@ static NSString *cellIdent = @"cellIdent";
 {
     
     [self.rightTableView reloadData];
+    
 }
 
 #pragma mark -- getter -- 
