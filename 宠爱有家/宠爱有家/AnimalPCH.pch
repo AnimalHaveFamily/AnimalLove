@@ -16,6 +16,8 @@
 
 #define Animalcolor [UIColor colorWithRed:1.0 green:0.15 blue:0.09 alpha:1.0]
 
+#define ViewBackColor [UIColor colorWithWhite:0.9 alpha:1];
+
 #define kLoadViewWithNIB(nibName) [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] lastObject]
 
 

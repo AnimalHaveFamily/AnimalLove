@@ -25,9 +25,10 @@
 
 
 - (void)viewDidLayoutSubviews{
-    self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
+    self.view.backgroundColor = ViewBackColor;
     self.headImgView.layer.cornerRadius = 51 / 2;
     self.headImgView.layer.masksToBounds = YES;
+    self.footView.backgroundColor = ViewBackColor;
     
 }
 

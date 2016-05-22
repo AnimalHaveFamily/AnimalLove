@@ -62,42 +62,23 @@
 }
 
 - (void)keepMessageAction{
-    
-    [self AleartWithTextFiled:self.reciveNameText.text WithContentMessage:@"请输入用户名"];
-    
-    if ([self.DetailAdressText.text isEqualToString:@""]) {
-        UIAlertController *content = [UIAlertController alertControllerWithTitle:@"警告" message:@"请输入用户名" preferredStyle:UIAlertControllerStyleAlert];
-        [content addAction:actionSure];
-        [self presentViewController:content animated:YES completion:nil];
+
+    if ([self.reciveNameText.text isEqualToString:@""]) {
+        [self Alert:@"请输入用户名"];
         return;
         
     }
     if ([self.DetailAdressText.text isEqualToString:@""]) {
-        UIAlertController *content = [UIAlertController alertControllerWithTitle:@"警告" message:@"请输入详细地址" preferredStyle:UIAlertControllerStyleAlert];
-        [content addAction:actionSure];
-        [self presentViewController:content animated:YES completion:nil];
+        [self Alert:@"请输入详细地址"];
         return;
         
     }
 
     if ([self.phoneNumberText.text isEqualToString:@""]) {
-        UIAlertController *content = [UIAlertController alertControllerWithTitle:@"警告" message:@"请输入手机号" preferredStyle:UIAlertControllerStyleAlert];
-        [content addAction:actionSure];
-        [self presentViewController:content animated:YES completion:nil];
-        return;
-        
+        [self Alert:@"请输入手机号"];
+                return;
     }
 
-//    [self AleartWithTextFiled:self.DetailAdressText.text WithContentMessage:@"""];
-//
-//    [self  AleartWithTextFiled:self.DetailAdressText.text WithContentMessage:@"请输入详细地址"];
-//    
-//    [self AleartWithTextFiled:self.phoneNumberText.text WithContentMessage:@"请输入手机号"];
-    
-    
-//    [self  AleartWithTextFiled:self.DetailAdressText.text WithContentMessage:@"请输入详细地址"];
-//    
-//    [self AleartWithTextFiled:self.phoneNumberText.text WithContentMessage:@"请输入手机号"];
 
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
@@ -118,21 +99,11 @@
     
 }
 
-
-- (void)AleartWithTextFiled:(NSString *)str WithContentMessage:(NSString *)string{
-    
-
-     if ([str isEqualToString:@""]) {
+- (void)Alert:(NSString *)string{
     UIAlertController *content = [UIAlertController alertControllerWithTitle:@"警告" message:string preferredStyle:UIAlertControllerStyleAlert];
     [content addAction:actionSure];
     [self presentViewController:content animated:YES completion:nil];
-         return;
-     
-     }
 }
-
-
-
 
 
 - (void)setWithView:(UIView *)myview{

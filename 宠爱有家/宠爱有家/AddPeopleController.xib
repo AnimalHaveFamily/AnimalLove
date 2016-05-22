@@ -163,8 +163,8 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号与固定电话至少填一个" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEO-6c-31l">
-                            <rect key="frame" x="100" y="0.0" width="194" height="38"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号与固定电话至少填一个" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEO-6c-31l">
+                            <rect key="frame" x="80" y="0.0" width="186" height="38"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
@@ -172,8 +172,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="v63-IF-jnl" firstAttribute="top" secondItem="zsk-4z-k0D" secondAttribute="top" id="8ua-OD-fP7"/>
+                        <constraint firstAttribute="bottom" secondItem="uEO-6c-31l" secondAttribute="bottom" id="NsH-bI-Byr"/>
+                        <constraint firstItem="uEO-6c-31l" firstAttribute="top" secondItem="zsk-4z-k0D" secondAttribute="top" id="QBT-28-Edz"/>
                         <constraint firstItem="v63-IF-jnl" firstAttribute="leading" secondItem="zsk-4z-k0D" secondAttribute="leading" constant="10" id="g0R-hN-yAx"/>
                         <constraint firstAttribute="height" constant="38" id="iTZ-Rl-Fqf"/>
+                        <constraint firstItem="uEO-6c-31l" firstAttribute="leading" secondItem="v63-IF-jnl" secondAttribute="trailing" constant="10" id="ilb-El-0JE"/>
                         <constraint firstAttribute="bottom" secondItem="v63-IF-jnl" secondAttribute="bottom" id="vtm-TJ-7vo"/>
                     </constraints>
                 </view>
@@ -181,7 +184,7 @@
                     <rect key="frame" x="0.0" y="254" width="294" height="38"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮政编码" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5O-rh-U0Z">
-                            <rect key="frame" x="10" y="0.0" width="56" height="38"/>
+                            <rect key="frame" x="15" y="0.0" width="56" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="38" id="WDF-YK-mln"/>
                             </constraints>
@@ -190,7 +193,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="可不填" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-RA-DiR">
-                            <rect key="frame" x="76" y="0.0" width="218" height="38"/>
+                            <rect key="frame" x="81" y="0.0" width="213" height="38"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
@@ -198,7 +201,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="HXz-RA-DiR" secondAttribute="trailing" id="5OJ-mW-4O8"/>
-                        <constraint firstItem="e5O-rh-U0Z" firstAttribute="leading" secondItem="TWg-ZX-EtT" secondAttribute="leading" constant="10" id="Fv4-rY-vRc"/>
+                        <constraint firstItem="e5O-rh-U0Z" firstAttribute="leading" secondItem="TWg-ZX-EtT" secondAttribute="leading" constant="15" id="Fv4-rY-vRc"/>
                         <constraint firstAttribute="height" constant="38" id="JaL-lX-QMG"/>
                         <constraint firstItem="e5O-rh-U0Z" firstAttribute="top" secondItem="TWg-ZX-EtT" secondAttribute="top" id="Q0G-ua-By7"/>
                         <constraint firstItem="HXz-RA-DiR" firstAttribute="leading" secondItem="e5O-rh-U0Z" secondAttribute="trailing" constant="10" id="Vyr-xX-jCK"/>

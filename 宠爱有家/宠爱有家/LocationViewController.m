@@ -95,9 +95,29 @@ sqlite3 *_db = NULL;
 }
 
 - (void)CreatSqlite{
-    NSString *filePath = @"/Users/xxxx/Desktop/AnimalLove/宠爱有家/city.sqlite";
     
-    int open = sqlite3_open(filePath.UTF8String, &_db);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [paths firstObject];
+    NSString *sqlithPath = [documentPath stringByAppendingPathComponent:@"my.sqlite"];
+    //沙盒路径
+    
+    
+    NSString *dapath = [[NSBundle mainBundle] pathForResource:@"city" ofType:@"sqlite"];
+    
+    NSFileManager *filemanager = [NSFileManager defaultManager];
+    NSError *error;
+    if (![filemanager fileExistsAtPath:sqlithPath]) {
+        NSLog(@"%@",dapath);
+        if ([filemanager copyItemAtPath:dapath toPath:sqlithPath error:&error]) {
+            NSLog(@"拷贝成功");
+        }
+    }
+    
+
+    
+//    NSString *filePath = @"/Users/xxxx/Desktop/AnimalLove/宠爱有家/city.sqlite";
+    
+    int open = sqlite3_open(sqlithPath.UTF8String, &_db);
     if (open == SQLITE_OK) {
         NSLog(@"打开成功");
         

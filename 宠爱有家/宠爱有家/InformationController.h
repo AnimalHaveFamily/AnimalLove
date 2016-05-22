@@ -13,7 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headImgView;
 @property (strong, nonatomic) IBOutlet UITableView *informationTableView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLable;
-@property (weak, nonatomic) IBOutlet UILabel *numberLab;
+@property (weak, nonatomic) IBOutlet UIView *footView;
+
 
 @property (nonatomic,strong)UIImagePickerController *ImagePicker;
 @end

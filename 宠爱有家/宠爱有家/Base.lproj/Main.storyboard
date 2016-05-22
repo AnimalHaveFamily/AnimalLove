@@ -14,6 +14,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="mXr-zu-HFp">
+                            <rect key="frame" x="0.0" y="332" width="600" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                         <sections>
                             <tableViewSection id="J6c-5a-6rU">
                                 <cells>
@@ -64,7 +69,7 @@
                                                         <constraint firstAttribute="width" constant="60" id="LLs-EC-7g6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -217,6 +222,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="footView" destination="mXr-zu-HFp" id="haU-v2-X6G"/>
                         <outlet property="headImgView" destination="5uP-ep-lGa" id="nT6-aL-PnE"/>
                         <outlet property="headPhotoCell" destination="N75-n6-MPJ" id="lXg-vo-eDE"/>
                         <outlet property="informationTableView" destination="KjP-3p-QqD" id="EeK-fv-GdT"/>
@@ -355,7 +361,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0T1-mb-VeZ" firstAttribute="leading" secondItem="7cb-9P-itS" secondAttribute="leadingMargin" constant="-10" id="3h7-MF-zYO"/>
                             <constraint firstItem="X61-3r-Z7Y" firstAttribute="leading" secondItem="7cb-9P-itS" secondAttribute="leadingMargin" constant="-10" id="BWh-2M-xwc"/>
@@ -412,7 +418,7 @@
                                             <constraint firstAttribute="width" constant="180" id="EHo-DU-sop"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -490,7 +496,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="j6F-0Z-Bbu" firstAttribute="top" secondItem="grh-sD-d7j" secondAttribute="bottom" constant="18" id="8Ef-CJ-WqO"/>
                             <constraint firstItem="sw1-pC-cvg" firstAttribute="top" secondItem="VKD-7p-AEs" secondAttribute="bottom" constant="10" id="Dzp-SJ-XwY"/>
