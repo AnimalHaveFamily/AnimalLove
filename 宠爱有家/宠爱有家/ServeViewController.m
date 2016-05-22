@@ -99,15 +99,14 @@
     
    
 //    NSString *inden = @"YMCView";
-
+//
 //    _ycView = kLoadViewWithNIB(inden);
-    _ycView = [[[NSBundle mainBundle] loadNibNamed:@"YMCView" owner:nil options:nil] lastObject];
-
-    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
-   
-    _ycView.frame = (CGRect){0, 90 ,   W,  H - 258};
-    [self.MyView addSubview:_ycView];
-    
+//
+//    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+//   
+//    _ycView.frame = (CGRect){0, 90 ,   W,  H - 258};
+//    [self.MyView addSubview:_ycView];
+//    
     
     NSString *indenone = @"FujinView";
     

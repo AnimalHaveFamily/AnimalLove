@@ -7,7 +7,7 @@
 //
 
 #import "YCViewController.h"
-#import "WSDropMenuView.h"
+#import "JiBieView.h"
 #import "YCCell.h"
 @interface YCViewController ()<WSDropMenuViewDataSource,WSDropMenuViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
