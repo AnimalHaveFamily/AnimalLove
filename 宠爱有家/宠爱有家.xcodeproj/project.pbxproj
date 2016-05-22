@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
 		037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037388D91CE9A5C500574E28 /* YCCell.xib */; };
+		03997AC11CEF2F5800A2789C /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03997AC01CEF2F5800A2789C /* WSDropMenuView.m */; };
+		039F729D1CEC943D005E71BD /* YCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039F729C1CEC943D005E71BD /* YCViewController.m */; };
 		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
 		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
-		03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D391CE6154100FBDAF7 /* YCButtonView.m */; };
+		03B867B31CE9E23500706901 /* YMCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B867B21CE9E23500706901 /* YMCView.xib */; };
+		03D2C6421CEB5BB900B04D33 /* FujinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2C6411CEB5BB900B04D33 /* FujinView.m */; };
+		03D2C6441CEB5BD700B04D33 /* FujinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D2C6431CEB5BD700B04D33 /* FujinView.xib */; };
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
 		226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328311CDC2D3F00BB023B /* MessageViewController.m */; };
 		226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 226328341CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m */; };
@@ -89,12 +93,18 @@
 		03402C411CE216EF007B5323 /* YCSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSegment.h; sourceTree = "<group>"; };
 		03402C421CE216EF007B5323 /* YCSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSegment.m; sourceTree = "<group>"; };
 		037388D91CE9A5C500574E28 /* YCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCCell.xib; sourceTree = "<group>"; };
+		03997ABF1CEF2F5800A2789C /* WSDropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDropMenuView.h; sourceTree = "<group>"; };
+		03997AC01CEF2F5800A2789C /* WSDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDropMenuView.m; sourceTree = "<group>"; };
+		039F729B1CEC943D005E71BD /* YCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCViewController.h; sourceTree = "<group>"; };
+		039F729C1CEC943D005E71BD /* YCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCViewController.m; sourceTree = "<group>"; };
 		03A93B5D1CE6F4C400A4DB5D /* YCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCView.h; sourceTree = "<group>"; };
 		03A93B5E1CE6F4C400A4DB5D /* YCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCView.m; sourceTree = "<group>"; };
 		03B37D331CE60D9600FBDAF7 /* YCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCell.h; sourceTree = "<group>"; };
 		03B37D341CE60D9600FBDAF7 /* YCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCell.m; sourceTree = "<group>"; };
-		03B37D381CE6154100FBDAF7 /* YCButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCButtonView.h; sourceTree = "<group>"; };
-		03B37D391CE6154100FBDAF7 /* YCButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCButtonView.m; sourceTree = "<group>"; };
+		03B867B21CE9E23500706901 /* YMCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCView.xib; sourceTree = "<group>"; };
+		03D2C6401CEB5BB900B04D33 /* FujinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FujinView.h; sourceTree = "<group>"; };
+		03D2C6411CEB5BB900B04D33 /* FujinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FujinView.m; sourceTree = "<group>"; };
+		03D2C6431CEB5BD700B04D33 /* FujinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FujinView.xib; sourceTree = "<group>"; };
 		2263282A1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+addLeftOrRightBarButton.h"; sourceTree = "<group>"; };
 		2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+addLeftOrRightBarButton.m"; sourceTree = "<group>"; };
 		226328301CDC2D3F00BB023B /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -222,6 +232,10 @@
 			children = (
 				22E710AB1CDB445A00B584B5 /* ServeViewController.h */,
 				22E710AC1CDB445A00B584B5 /* ServeViewController.m */,
+				039F729B1CEC943D005E71BD /* YCViewController.h */,
+				039F729C1CEC943D005E71BD /* YCViewController.m */,
+				03997ABF1CEF2F5800A2789C /* WSDropMenuView.h */,
+				03997AC01CEF2F5800A2789C /* WSDropMenuView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -232,10 +246,12 @@
 				03B37D331CE60D9600FBDAF7 /* YCCell.h */,
 				03B37D341CE60D9600FBDAF7 /* YCCell.m */,
 				037388D91CE9A5C500574E28 /* YCCell.xib */,
-				03B37D381CE6154100FBDAF7 /* YCButtonView.h */,
-				03B37D391CE6154100FBDAF7 /* YCButtonView.m */,
 				03A93B5D1CE6F4C400A4DB5D /* YCView.h */,
 				03A93B5E1CE6F4C400A4DB5D /* YCView.m */,
+				03B867B21CE9E23500706901 /* YMCView.xib */,
+				03D2C6401CEB5BB900B04D33 /* FujinView.h */,
+				03D2C6411CEB5BB900B04D33 /* FujinView.m */,
+				03D2C6431CEB5BD700B04D33 /* FujinView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -596,6 +612,7 @@
 				22E30A4C1CEB3571008A0EF3 /* selfTableViewCell.xib in Resources */,
 				037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */,
 				22845F221CE35ED0004D17B4 /* leftBtnView.xib in Resources */,
+				03D2C6441CEB5BD700B04D33 /* FujinView.xib in Resources */,
 				22E7107A1CDB425400B584B5 /* LaunchScreen.storyboard in Resources */,
 				22956CBD1CE5AB6100A503E7 /* LocationHeadView.xib in Resources */,
 				226589011CEF2E870059EBD9 /* MainTableViewCell.xib in Resources */,
@@ -644,6 +661,7 @@
 				2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */,
 				22E30A551CEB50F2008A0EF3 /* AnimalTools.m in Sources */,
 				22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */,
+				039F729D1CEC943D005E71BD /* YCViewController.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,
 				03402C431CE216EF007B5323 /* YCSegment.m in Sources */,
 				22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */,
@@ -667,6 +685,7 @@
 				22BCD94B1CEDE89900780448 /* PasswardController.m in Sources */,
 				22D29AD61CE1B7630096803A /* LCViewPagerView.m in Sources */,
 				22E710B41CDB46FA00B584B5 /* AnimalTabar.m in Sources */,
+				03D2C6421CEB5BB900B04D33 /* FujinView.m in Sources */,
 				22845F251CE3690A004D17B4 /* LocationViewController.m in Sources */,
 				03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */,
 				22E30A4F1CEB3910008A0EF3 /* selfHeadView.m in Sources */,

@@ -27,7 +27,7 @@
                             <constraint firstAttribute="width" constant="70" id="jEm-eD-jpZ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBe-wn-yjg">
@@ -36,7 +36,7 @@
                             <constraint firstAttribute="width" constant="200" id="ZNw-Oq-Z6d"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VP-0u-BNf" userLabel="55">
@@ -45,7 +45,7 @@
                             <constraint firstAttribute="width" constant="150" id="WhP-P8-YlV"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -61,6 +61,12 @@
                     <constraint firstItem="v19-QO-wRE" firstAttribute="bottom" secondItem="qAY-FA-eMT" secondAttribute="bottomMargin" id="ueB-Sk-DOy"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="BeiZhuLable" destination="DBe-wn-yjg" id="QWN-8y-QaR"/>
+                <outlet property="NameLable" destination="5VP-0u-BNf" id="f6z-CA-eRc"/>
+                <outlet property="NameView" destination="v19-QO-wRE" id="Rhm-WX-ncw"/>
+                <outlet property="TimeView" destination="CR7-Oc-vIY" id="p54-8b-WEd"/>
+            </connections>
             <point key="canvasLocation" x="514.5" y="513"/>
         </tableViewCell>
     </objects>

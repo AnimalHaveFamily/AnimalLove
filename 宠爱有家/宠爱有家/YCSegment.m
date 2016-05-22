@@ -83,6 +83,7 @@
      *  @param idx  遍历的元素所对应的索引
      *  @param stop 是否停止
      */
+    
     [self.items enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         CGRect rect = (CGRect){idx * self.perWidth,5,self.perWidth,H };
