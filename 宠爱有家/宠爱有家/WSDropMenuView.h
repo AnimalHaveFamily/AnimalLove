@@ -35,10 +35,6 @@
 
 @end
 
-
-
-
-
 @class WSDropMenuView;
 
 @protocol WSDropMenuViewDataSource <NSObject>
@@ -48,16 +44,11 @@
 
 - (NSString *)dropMenuView:(WSDropMenuView *)dropMenuView titleWithIndexPath:(WSIndexPath *)indexPath;
 
-
 @end
-
-
 
 @protocol WSDropMenuViewDelegate <NSObject>
 
-
 - (void)dropMenuView:(WSDropMenuView *)dropMenuView didSelectWithIndexPath:(WSIndexPath *)indexPath;
-
 
 @end
 
@@ -65,8 +56,6 @@
 
 @property (nonatomic,weak) id<WSDropMenuViewDataSource> dataSource;
 @property (nonatomic,weak) id<WSDropMenuViewDelegate> delegate;
-
-
 
 - (void)reloadLeftTableView;
 
