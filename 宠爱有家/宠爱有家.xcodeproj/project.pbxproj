@@ -10,7 +10,6 @@
 		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
 		037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037388D91CE9A5C500574E28 /* YCCell.xib */; };
 		039395321CF163C3000161D3 /* JiBieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039395311CF163C3000161D3 /* JiBieView.m */; };
-		03997AC11CEF2F5800A2789C /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03997AC01CEF2F5800A2789C /* WSDropMenuView.m */; };
 		039F729D1CEC943D005E71BD /* YCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039F729C1CEC943D005E71BD /* YCViewController.m */; };
 		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
 		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
@@ -31,7 +30,6 @@
 		226AC5BF1CE9E7710039A870 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226AC5BD1CE9E7710039A870 /* LoginController.xib */; };
 		2273146D1CF148E8009FF007 /* AdressNoMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273146C1CF148E8009FF007 /* AdressNoMessageView.m */; };
 		2273146F1CF14909009FF007 /* AdressNoMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273146E1CF14909009FF007 /* AdressNoMessageView.xib */; };
-		227314701CF16190009FF007 /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03997AC01CEF2F5800A2789C /* WSDropMenuView.m */; };
 		2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED671CEC8804003E8CA6 /* InformationController.m */; };
 		2275ED6D1CEC9570003E8CA6 /* NameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED6C1CEC9570003E8CA6 /* NameController.m */; };
 		22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F1A1CE34ADB004D17B4 /* SearchBackView.m */; };
@@ -43,7 +41,6 @@
 		22956CB81CE5A8E000A503E7 /* LocationTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22956CB61CE5A8E000A503E7 /* LocationTableCell.xib */; };
 		22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22956CBA1CE5AB4A00A503E7 /* LocationHeadView.m */; };
 		22956CBD1CE5AB6100A503E7 /* LocationHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22956CBC1CE5AB6100A503E7 /* LocationHeadView.xib */; };
-		22BCD9481CEDE00A00780448 /* SetNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD9471CEDE00A00780448 /* SetNumberController.m */; };
 		22BCD94B1CEDE89900780448 /* PasswardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD94A1CEDE89900780448 /* PasswardController.m */; };
 		22BCD94E1CEDF18300780448 /* AdressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD94D1CEDF18300780448 /* AdressController.m */; };
 		22BCD9521CEDF38500780448 /* AddPeopleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD9501CEDF38500780448 /* AddPeopleController.m */; };
@@ -96,8 +93,6 @@
 		037388D91CE9A5C500574E28 /* YCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCCell.xib; sourceTree = "<group>"; };
 		039395301CF163C3000161D3 /* JiBieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBieView.h; sourceTree = "<group>"; };
 		039395311CF163C3000161D3 /* JiBieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBieView.m; sourceTree = "<group>"; };
-		03997ABF1CEF2F5800A2789C /* WSDropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDropMenuView.h; sourceTree = "<group>"; };
-		03997AC01CEF2F5800A2789C /* WSDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDropMenuView.m; sourceTree = "<group>"; };
 		039F729B1CEC943D005E71BD /* YCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCViewController.h; sourceTree = "<group>"; };
 		039F729C1CEC943D005E71BD /* YCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCViewController.m; sourceTree = "<group>"; };
 		03A93B5D1CE6F4C400A4DB5D /* YCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCView.h; sourceTree = "<group>"; };
@@ -237,8 +232,6 @@
 				22E710AC1CDB445A00B584B5 /* ServeViewController.m */,
 				039F729B1CEC943D005E71BD /* YCViewController.h */,
 				039F729C1CEC943D005E71BD /* YCViewController.m */,
-				03997ABF1CEF2F5800A2789C /* WSDropMenuView.h */,
-				03997AC01CEF2F5800A2789C /* WSDropMenuView.m */,
 				039395301CF163C3000161D3 /* JiBieView.h */,
 				039395311CF163C3000161D3 /* JiBieView.m */,
 			);
@@ -654,12 +647,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227314701CF16190009FF007 /* WSDropMenuView.m in Sources */,
 				03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */,
 				2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */,
 				22BCD9521CEDF38500780448 /* AddPeopleController.m in Sources */,
 				226328451CDC6F2A00BB023B /* introduceCollectionViewCell.m in Sources */,
-				03997AC11CEF2F5800A2789C /* WSDropMenuView.m in Sources */,
 				039395321CF163C3000161D3 /* JiBieView.m in Sources */,
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,

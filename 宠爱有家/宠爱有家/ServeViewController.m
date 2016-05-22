@@ -98,15 +98,15 @@
     [self.MyView addSubview:segment];
     
    
-    NSString *inden = @"YMCView";
-
-    _ycView = kLoadViewWithNIB(inden);
-
-    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
-   
-    _ycView.frame = (CGRect){0, 90 ,   W,  H - 258};
-    [self.MyView addSubview:_ycView];
-    
+//    NSString *inden = @"YMCView";
+//
+//    _ycView = kLoadViewWithNIB(inden);
+//
+//    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+//   
+//    _ycView.frame = (CGRect){0, 90 ,   W,  H - 258};
+//    [self.MyView addSubview:_ycView];
+//    
     
     NSString *indenone = @"FujinView";
     
