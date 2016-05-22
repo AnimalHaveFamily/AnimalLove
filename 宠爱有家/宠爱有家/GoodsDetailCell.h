@@ -10,7 +10,4 @@
 
 @interface GoodsDetailCell : UITableViewCell
 
-
-
-
 @end
