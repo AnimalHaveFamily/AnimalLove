@@ -60,7 +60,6 @@
 		22E7106C1CDB425400B584B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106B1CDB425400B584B5 /* main.m */; };
 		22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7106E1CDB425400B584B5 /* AppDelegate.m */; };
 		22E710751CDB425400B584B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E710731CDB425400B584B5 /* Main.storyboard */; };
-		22E710771CDB425400B584B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E710761CDB425400B584B5 /* Assets.xcassets */; };
 		22E7107A1CDB425400B584B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E710781CDB425400B584B5 /* LaunchScreen.storyboard */; };
 		22E710851CDB425400B584B5 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E710841CDB425400B584B5 /* ____Tests.m */; };
 		22E710901CDB425400B584B5 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7108F1CDB425400B584B5 /* ____UITests.m */; };
@@ -86,6 +85,7 @@
 		7A84EA7B1CF1CE960084643A /* GoodsDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A84EA6D1CF1CE960084643A /* GoodsDetailHeaderView.xib */; };
 		7A84EA801CF1CEB50084643A /* UIButton+layerBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84EA7D1CF1CEB50084643A /* UIButton+layerBorder.m */; };
 		7A84EA811CF1CEB50084643A /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84EA7F1CF1CEB50084643A /* UIView+frame.m */; };
+		7A84EA831CF1D4840084643A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A84EA821CF1D4840084643A /* Assets.xcassets */; };
 		C794D3117F590E41A14FB348 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3CA7DB334B77048CF99728 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -196,7 +196,6 @@
 		22E7106D1CDB425400B584B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22E7106E1CDB425400B584B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22E710741CDB425400B584B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		22E710761CDB425400B584B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22E710791CDB425400B584B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22E7107B1CDB425400B584B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22E710801CDB425400B584B5 /* 宠爱有家Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "宠爱有家Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +246,7 @@
 		7A84EA7D1CF1CEB50084643A /* UIButton+layerBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+layerBorder.m"; path = "../../../宠爱有家/宠爱有家/UIButton+layerBorder.m"; sourceTree = "<group>"; };
 		7A84EA7E1CF1CEB50084643A /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+frame.h"; path = "../../../宠爱有家/宠爱有家/UIView+frame.h"; sourceTree = "<group>"; };
 		7A84EA7F1CF1CEB50084643A /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+frame.m"; path = "../../../宠爱有家/宠爱有家/UIView+frame.m"; sourceTree = "<group>"; };
+		7A84EA821CF1D4840084643A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,8 +458,8 @@
 				22D29ADA1CE2013F0096803A /* AnimalSigle.h */,
 				22D29ADB1CE2013F0096803A /* AnimalSigle.m */,
 				22E710B11CDB44E700B584B5 /* AnimalPCH.pch */,
+				7A84EA821CF1D4840084643A /* Assets.xcassets */,
 				22E710731CDB425400B584B5 /* Main.storyboard */,
-				22E710761CDB425400B584B5 /* Assets.xcassets */,
 				22E710781CDB425400B584B5 /* LaunchScreen.storyboard */,
 				22E7107B1CDB425400B584B5 /* Info.plist */,
 			);
@@ -711,6 +711,7 @@
 				22E30A4C1CEB3571008A0EF3 /* selfTableViewCell.xib in Resources */,
 				037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */,
 				7A84EA771CF1CE960084643A /* ShopCartCell.xib in Resources */,
+				7A84EA831CF1D4840084643A /* Assets.xcassets in Resources */,
 				7A84EA731CF1CE960084643A /* GoodsDetailCell.xib in Resources */,
 				22845F221CE35ED0004D17B4 /* leftBtnView.xib in Resources */,
 				03D2C6441CEB5BD700B04D33 /* FujinView.xib in Resources */,
@@ -726,7 +727,6 @@
 				22BCD9531CEDF38500780448 /* AddPeopleController.xib in Resources */,
 				226328411CDC3F2C00BB023B /* HeaderReusableView.xib in Resources */,
 				22845F1D1CE34AFD004D17B4 /* SearchBackView.xib in Resources */,
-				22E710771CDB425400B584B5 /* Assets.xcassets in Resources */,
 				2273146F1CF14909009FF007 /* AdressNoMessageView.xib in Resources */,
 				22E710751CDB425400B584B5 /* Main.storyboard in Resources */,
 				226AC5BF1CE9E7710039A870 /* LoginController.xib in Resources */,
