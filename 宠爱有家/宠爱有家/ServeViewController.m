@@ -98,9 +98,10 @@
     [self.MyView addSubview:segment];
     
    
-    NSString *inden = @"YMCView";
+//    NSString *inden = @"YMCView";
 
-    _ycView = kLoadViewWithNIB(inden);
+//    _ycView = kLoadViewWithNIB(inden);
+    _ycView = [[[NSBundle mainBundle] loadNibNamed:@"YMCView" owner:nil options:nil] lastObject];
 
     _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
    

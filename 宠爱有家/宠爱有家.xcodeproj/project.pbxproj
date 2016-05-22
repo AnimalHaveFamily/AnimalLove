@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
 		037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037388D91CE9A5C500574E28 /* YCCell.xib */; };
 		039395321CF163C3000161D3 /* JiBieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039395311CF163C3000161D3 /* JiBieView.m */; };
 		03997AC11CEF2F5800A2789C /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03997AC01CEF2F5800A2789C /* WSDropMenuView.m */; };
@@ -31,7 +30,7 @@
 		226AC5BF1CE9E7710039A870 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226AC5BD1CE9E7710039A870 /* LoginController.xib */; };
 		2273146D1CF148E8009FF007 /* AdressNoMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273146C1CF148E8009FF007 /* AdressNoMessageView.m */; };
 		2273146F1CF14909009FF007 /* AdressNoMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273146E1CF14909009FF007 /* AdressNoMessageView.xib */; };
-		227314701CF16190009FF007 /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03997AC01CEF2F5800A2789C /* WSDropMenuView.m */; };
+		227314721CF18FB3009FF007 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 227314711CF18FB3009FF007 /* YCSegment.m */; };
 		2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED671CEC8804003E8CA6 /* InformationController.m */; };
 		2275ED6D1CEC9570003E8CA6 /* NameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED6C1CEC9570003E8CA6 /* NameController.m */; };
 		22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F1A1CE34ADB004D17B4 /* SearchBackView.m */; };
@@ -43,7 +42,6 @@
 		22956CB81CE5A8E000A503E7 /* LocationTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22956CB61CE5A8E000A503E7 /* LocationTableCell.xib */; };
 		22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22956CBA1CE5AB4A00A503E7 /* LocationHeadView.m */; };
 		22956CBD1CE5AB6100A503E7 /* LocationHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22956CBC1CE5AB6100A503E7 /* LocationHeadView.xib */; };
-		22BCD9481CEDE00A00780448 /* SetNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD9471CEDE00A00780448 /* SetNumberController.m */; };
 		22BCD94B1CEDE89900780448 /* PasswardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD94A1CEDE89900780448 /* PasswardController.m */; };
 		22BCD94E1CEDF18300780448 /* AdressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD94D1CEDF18300780448 /* AdressController.m */; };
 		22BCD9521CEDF38500780448 /* AddPeopleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCD9501CEDF38500780448 /* AddPeopleController.m */; };
@@ -91,8 +89,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03402C411CE216EF007B5323 /* YCSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSegment.h; sourceTree = "<group>"; };
-		03402C421CE216EF007B5323 /* YCSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSegment.m; sourceTree = "<group>"; };
 		037388D91CE9A5C500574E28 /* YCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCCell.xib; sourceTree = "<group>"; };
 		039395301CF163C3000161D3 /* JiBieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBieView.h; sourceTree = "<group>"; };
 		039395311CF163C3000161D3 /* JiBieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBieView.m; sourceTree = "<group>"; };
@@ -132,6 +128,8 @@
 		2273146B1CF148E8009FF007 /* AdressNoMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdressNoMessageView.h; sourceTree = "<group>"; };
 		2273146C1CF148E8009FF007 /* AdressNoMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdressNoMessageView.m; sourceTree = "<group>"; };
 		2273146E1CF14909009FF007 /* AdressNoMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdressNoMessageView.xib; sourceTree = "<group>"; };
+		227314711CF18FB3009FF007 /* YCSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSegment.m; sourceTree = "<group>"; };
+		227314741CF18FE8009FF007 /* YCSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSegment.h; sourceTree = "<group>"; };
 		2275ED661CEC8804003E8CA6 /* InformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationController.h; sourceTree = "<group>"; };
 		2275ED671CEC8804003E8CA6 /* InformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationController.m; sourceTree = "<group>"; };
 		2275ED6B1CEC9570003E8CA6 /* NameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameController.h; sourceTree = "<group>"; };
@@ -271,8 +269,8 @@
 		03402C401CE216AF007B5323 /* Segment */ = {
 			isa = PBXGroup;
 			children = (
-				03402C411CE216EF007B5323 /* YCSegment.h */,
-				03402C421CE216EF007B5323 /* YCSegment.m */,
+				227314741CF18FE8009FF007 /* YCSegment.h */,
+				227314711CF18FB3009FF007 /* YCSegment.m */,
 			);
 			name = Segment;
 			sourceTree = "<group>";
@@ -654,7 +652,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227314701CF16190009FF007 /* WSDropMenuView.m in Sources */,
 				03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */,
 				2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */,
 				22BCD9521CEDF38500780448 /* AddPeopleController.m in Sources */,
@@ -669,7 +666,6 @@
 				22956CBB1CE5AB4A00A503E7 /* LocationHeadView.m in Sources */,
 				039F729D1CEC943D005E71BD /* YCViewController.m in Sources */,
 				22E710B71CDB492F00B584B5 /* SelfViewController.m in Sources */,
-				03402C431CE216EF007B5323 /* YCSegment.m in Sources */,
 				22E7106F1CDB425400B584B5 /* AppDelegate.m in Sources */,
 				2273146D1CF148E8009FF007 /* AdressNoMessageView.m in Sources */,
 				22BCD94E1CEDF18300780448 /* AdressController.m in Sources */,
@@ -686,6 +682,7 @@
 				226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */,
 				22E710AD1CDB445A00B584B5 /* ServeViewController.m in Sources */,
 				22956CB71CE5A8E000A503E7 /* LocationTableCell.m in Sources */,
+				227314721CF18FB3009FF007 /* YCSegment.m in Sources */,
 				22D29ADC1CE2013F0096803A /* AnimalSigle.m in Sources */,
 				22E30A4B1CEB3571008A0EF3 /* selfTableViewCell.m in Sources */,
 				22BCD94B1CEDE89900780448 /* PasswardController.m in Sources */,
