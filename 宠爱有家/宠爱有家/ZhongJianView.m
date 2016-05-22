@@ -1,14 +1,14 @@
 //
-//  YCView.m
+//  ZhongJianView.m
 //  宠爱有家
 //
-//  Created by ymcgz on 16/5/14.
+//  Created by ymcgz on 16/5/22.
 //  Copyright © 2016年 XXXX. All rights reserved.
 //
 
-#import "YCView.h"
+#import "ZhongJianView.h"
 
-@implementation YCView
+@implementation ZhongJianView
 
 /*
 // Only override drawRect: if you perform custom drawing.

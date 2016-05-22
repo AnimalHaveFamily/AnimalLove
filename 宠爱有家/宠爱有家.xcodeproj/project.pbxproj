@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037388D91CE9A5C500574E28 /* YCCell.xib */; };
 		039395321CF163C3000161D3 /* JiBieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039395311CF163C3000161D3 /* JiBieView.m */; };
+		039395331CF192C4000161D3 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 227314711CF18FB3009FF007 /* YCSegment.m */; };
 		039F729D1CEC943D005E71BD /* YCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039F729C1CEC943D005E71BD /* YCViewController.m */; };
-		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
 		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
+		03CB3A791CF1B34B007D7F7D /* FuWuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03CB3A781CF1B34B007D7F7D /* FuWuView.xib */; };
+		03CB3A7C1CF1B4B3007D7F7D /* ZhongJianView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CB3A7B1CF1B4B3007D7F7D /* ZhongJianView.m */; };
 		03D2C6421CEB5BB900B04D33 /* FujinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2C6411CEB5BB900B04D33 /* FujinView.m */; };
 		03D2C6441CEB5BD700B04D33 /* FujinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D2C6431CEB5BD700B04D33 /* FujinView.xib */; };
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
@@ -92,11 +94,11 @@
 		039395311CF163C3000161D3 /* JiBieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBieView.m; sourceTree = "<group>"; };
 		039F729B1CEC943D005E71BD /* YCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCViewController.h; sourceTree = "<group>"; };
 		039F729C1CEC943D005E71BD /* YCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCViewController.m; sourceTree = "<group>"; };
-		03A93B5D1CE6F4C400A4DB5D /* YCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCView.h; sourceTree = "<group>"; };
-		03A93B5E1CE6F4C400A4DB5D /* YCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCView.m; sourceTree = "<group>"; };
 		03B37D331CE60D9600FBDAF7 /* YCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCell.h; sourceTree = "<group>"; };
 		03B37D341CE60D9600FBDAF7 /* YCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCell.m; sourceTree = "<group>"; };
-		03B867B21CE9E23500706901 /* YMCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCView.xib; sourceTree = "<group>"; };
+		03CB3A781CF1B34B007D7F7D /* FuWuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FuWuView.xib; sourceTree = "<group>"; };
+		03CB3A7A1CF1B4B3007D7F7D /* ZhongJianView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhongJianView.h; sourceTree = "<group>"; };
+		03CB3A7B1CF1B4B3007D7F7D /* ZhongJianView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhongJianView.m; sourceTree = "<group>"; };
 		03D2C6401CEB5BB900B04D33 /* FujinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FujinView.h; sourceTree = "<group>"; };
 		03D2C6411CEB5BB900B04D33 /* FujinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FujinView.m; sourceTree = "<group>"; };
 		03D2C6431CEB5BD700B04D33 /* FujinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FujinView.xib; sourceTree = "<group>"; };
@@ -243,12 +245,12 @@
 				03B37D331CE60D9600FBDAF7 /* YCCell.h */,
 				03B37D341CE60D9600FBDAF7 /* YCCell.m */,
 				037388D91CE9A5C500574E28 /* YCCell.xib */,
-				03A93B5D1CE6F4C400A4DB5D /* YCView.h */,
-				03A93B5E1CE6F4C400A4DB5D /* YCView.m */,
-				03B867B21CE9E23500706901 /* YMCView.xib */,
 				03D2C6401CEB5BB900B04D33 /* FujinView.h */,
 				03D2C6411CEB5BB900B04D33 /* FujinView.m */,
 				03D2C6431CEB5BD700B04D33 /* FujinView.xib */,
+				03CB3A7A1CF1B4B3007D7F7D /* ZhongJianView.h */,
+				03CB3A7B1CF1B4B3007D7F7D /* ZhongJianView.m */,
+				03CB3A781CF1B34B007D7F7D /* FuWuView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -614,6 +616,7 @@
 				22956CBD1CE5AB6100A503E7 /* LocationHeadView.xib in Resources */,
 				226589011CEF2E870059EBD9 /* MainTableViewCell.xib in Resources */,
 				22E30A511CEB3936008A0EF3 /* selfHeadView.xib in Resources */,
+				03CB3A791CF1B34B007D7F7D /* FuWuView.xib in Resources */,
 				22E40A261CE6D46500E64FFE /* city.sqlite in Resources */,
 				22BCD9531CEDF38500780448 /* AddPeopleController.xib in Resources */,
 				226328411CDC3F2C00BB023B /* HeaderReusableView.xib in Resources */,
@@ -646,10 +649,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */,
+				039395331CF192C4000161D3 /* YCSegment.m in Sources */,
 				2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */,
 				22BCD9521CEDF38500780448 /* AddPeopleController.m in Sources */,
 				226328451CDC6F2A00BB023B /* introduceCollectionViewCell.m in Sources */,
+				03CB3A7C1CF1B4B3007D7F7D /* ZhongJianView.m in Sources */,
 				039395321CF163C3000161D3 /* JiBieView.m in Sources */,
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,
@@ -675,7 +679,6 @@
 				226328321CDC2D3F00BB023B /* MessageViewController.m in Sources */,
 				22E710AD1CDB445A00B584B5 /* ServeViewController.m in Sources */,
 				22956CB71CE5A8E000A503E7 /* LocationTableCell.m in Sources */,
-				227314721CF18FB3009FF007 /* YCSegment.m in Sources */,
 				22D29ADC1CE2013F0096803A /* AnimalSigle.m in Sources */,
 				22E30A4B1CEB3571008A0EF3 /* selfTableViewCell.m in Sources */,
 				22BCD94B1CEDE89900780448 /* PasswardController.m in Sources */,
