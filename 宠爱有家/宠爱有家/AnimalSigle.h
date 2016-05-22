@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface AnimalSigle : NSObject
+@property (nonatomic ,copy)NSString *username;
+
++ (id)SelfMessage;
 
 @end
