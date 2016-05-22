@@ -46,16 +46,10 @@
     
     [self.view addSubview:self.tableView];
     
-    
-    self.dataArr=[NSMutableArray arrayWithCapacity:100];
-    
-    for (NSInteger i=0; i<100; i++) {
-        [self.dataArr addObject:[NSString stringWithFormat:@"%ld",(long)i]];
-    }
-    
-    
+
     self.MyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, H - 108)];
     self.tableView.tableHeaderView = self.MyView;
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"YCCell" bundle:nil] forCellReuseIdentifier:@"YCCell"];
     
 
@@ -84,13 +78,16 @@
     
     [self.MyView addSubview:segment];
     
-   
-
-    _ycView = [[[NSBundle mainBundle] loadNibNamed:@"YCView" owner:nil options:nil] lastObject];
-    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
-   
-    _ycView.frame = (CGRect){0, 110 ,   W,  H - 258};
-    [self.MyView addSubview:_ycView];
+//   
+//    NSString *inden = @"YCView";
+//
+//    _ycView = kLoadViewWithNIB(inden);
+//
+//    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+//   
+//    _ycView.frame = (CGRect){0, 110 ,   W,  H - 258};
+//    [self.MyView addSubview:_ycView];
+    
     }
 
 
@@ -112,6 +109,7 @@
 
 //返回显示cell内容
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     YCCell *cell =[tableView dequeueReusableCellWithIdentifier:@"YCCell" forIndexPath:indexPath];
 
     return cell;

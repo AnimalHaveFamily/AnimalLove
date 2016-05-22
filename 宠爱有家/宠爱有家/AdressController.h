@@ -1,14 +1,15 @@
 //
-//  YCView.h
+//  AdressController.h
 //  宠爱有家
 //
-//  Created by ymcgz on 16/5/14.
+//  Created by XXXX on 16/5/19.
 //  Copyright © 2016年 XXXX. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface YCView : UIView
+
+@interface AdressController : UIViewController
 
 
 @end

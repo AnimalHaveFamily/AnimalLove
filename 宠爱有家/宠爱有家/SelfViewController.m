@@ -7,18 +7,93 @@
 //
 
 #import "SelfViewController.h"
+#import "LoginController.h"
+#import "UIViewController+addLeftOrRightBarButton.h"
+#import "selfTableViewCell.h"
+#import "InformationController.h"
+#import "UIViewController+PushViewControllerWithBarHidden.h"
 
-@interface SelfViewController ()
+@interface SelfViewController ()<UITableViewDataSource,UITableViewDelegate>
 
+@property (nonatomic,strong)UITableView *selfTableView;
 @end
 
 @implementation SelfViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ////
+    [self addRightBtnImageName:@"nav_news_icon" action:@selector(setAction)];
    
-    self.navigationItem.title = @"我的kkk";
+    self.navigationItem.title = @"我的";
+    
+    _selfTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+    _selfTableView.dataSource = self;
+    _selfTableView.delegate = self;
+    _selfTableView.bounces = NO;
+    [self.view addSubview:_selfTableView];
+    
+    [_selfTableView registerNib:[UINib nibWithNibName:@"selfTableViewCell" bundle:nil] forCellReuseIdentifier:@"selfcell"];
+    
+    UIView *headview = [[[NSBundle mainBundle] loadNibNamed:@"selfHeadView" owner:nil options:nil] lastObject];
+//    headview.frame = CGRectMake(0, 0, W, W / 2);
+    _selfTableView.tableHeaderView = headview;
+    
+
+    
+    
+}
+
+
+#pragma mark -- UITbaleViewDatasourse
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0) {
+        return 4;
+    }
+    else return 2;
+    
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    selfTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"selfcell"];
+    NSArray *arr = @[@"个人资料",@"我的订单",@"我的收藏",@"我的优惠券",@"消息中心",@"在线客服",];
+    cell.textLabel.text = arr[indexPath.row];
+    return cell;
+
+}
+
+
+#pragma mark -- UITbaleViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+//设置组数
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 10;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    InformationController *informationVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"InformationController"];
+
+    [self pushViewControllerWithTabBarHidden:informationVC];
+    
+}
+
+
+
+- (void)setAction{
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

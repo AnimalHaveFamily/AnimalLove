@@ -10,4 +10,20 @@
 
 @implementation AnimalSigle
 
++ (id)SelfMessage{
+    return [[self alloc] init];
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone{
+    
+    static AnimalSigle *message = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken,^{
+        message = [super allocWithZone:zone];
+        message.username = @"";
+    });
+    return message;
+
+}
+
 @end
