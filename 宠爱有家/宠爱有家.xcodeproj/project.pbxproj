@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		03402C431CE216EF007B5323 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03402C421CE216EF007B5323 /* YCSegment.m */; };
 		037388DA1CE9A5C500574E28 /* YCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037388D91CE9A5C500574E28 /* YCCell.xib */; };
-		03997AC11CEF2F5800A2789C /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03997AC01CEF2F5800A2789C /* WSDropMenuView.m */; };
 		039F729D1CEC943D005E71BD /* YCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039F729C1CEC943D005E71BD /* YCViewController.m */; };
 		03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93B5E1CE6F4C400A4DB5D /* YCView.m */; };
 		03B37D361CE60D9600FBDAF7 /* YCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B37D341CE60D9600FBDAF7 /* YCCell.m */; };
-		03B867B31CE9E23500706901 /* YMCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B867B21CE9E23500706901 /* YMCView.xib */; };
 		03D2C6421CEB5BB900B04D33 /* FujinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2C6411CEB5BB900B04D33 /* FujinView.m */; };
 		03D2C6441CEB5BD700B04D33 /* FujinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D2C6431CEB5BD700B04D33 /* FujinView.xib */; };
 		2263282C1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2263282B1CDC266C00BB023B /* UIViewController+addLeftOrRightBarButton.m */; };
@@ -31,6 +29,7 @@
 		226AC5BF1CE9E7710039A870 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226AC5BD1CE9E7710039A870 /* LoginController.xib */; };
 		2273146D1CF148E8009FF007 /* AdressNoMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273146C1CF148E8009FF007 /* AdressNoMessageView.m */; };
 		2273146F1CF14909009FF007 /* AdressNoMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273146E1CF14909009FF007 /* AdressNoMessageView.xib */; };
+		227314701CF16190009FF007 /* WSDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03997AC01CEF2F5800A2789C /* WSDropMenuView.m */; };
 		2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED671CEC8804003E8CA6 /* InformationController.m */; };
 		2275ED6D1CEC9570003E8CA6 /* NameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED6C1CEC9570003E8CA6 /* NameController.m */; };
 		22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22845F1A1CE34ADB004D17B4 /* SearchBackView.m */; };
@@ -649,12 +648,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227314701CF16190009FF007 /* WSDropMenuView.m in Sources */,
 				03A93B5F1CE6F4C400A4DB5D /* YCView.m in Sources */,
 				2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */,
 				22BCD9521CEDF38500780448 /* AddPeopleController.m in Sources */,
 				226328451CDC6F2A00BB023B /* introduceCollectionViewCell.m in Sources */,
 				22BCD9481CEDE00A00780448 /* SetNumberController.m in Sources */,
-				03B37D3A1CE6154100FBDAF7 /* YCButtonView.m in Sources */,
 				22E710AA1CDB442E00B584B5 /* ShopViewController.m in Sources */,
 				226328351CDC324E00BB023B /* UIViewController+PushViewControllerWithBarHidden.m in Sources */,
 				22845F1B1CE34ADB004D17B4 /* SearchBackView.m in Sources */,
