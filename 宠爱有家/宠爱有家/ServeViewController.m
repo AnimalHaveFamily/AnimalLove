@@ -8,7 +8,7 @@
 
 #import "ServeViewController.h"
 #import "YCSegment.h"
-#import "YCView.h"
+#import "ZhongJianView.h"
 #import "YCCell.h"
 #import "FujinView.h"
 #import "YCViewController.h"
@@ -28,7 +28,9 @@
 @property (nonatomic ,strong) UIView *MyView;
 
 @property (nonatomic ,strong) FujinView *fujin;
-@property (nonatomic ,strong) YCView *ycView;
+@property (nonatomic ,strong) ZhongJianView *zhongjianView;
+
+
 
 //数据源
 
@@ -44,8 +46,6 @@
     [self pushViewControllerWithTabBarHidden:[[YCViewController alloc] init]];
 
 }
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"服务";
@@ -65,10 +65,6 @@
     
     self.MyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, H - 108)];
     self.tableView.tableHeaderView = self.MyView;
-    
-   
-    
-
     
     self.SearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     
@@ -98,15 +94,18 @@
     [self.MyView addSubview:segment];
     
    
-//    NSString *inden = @"YMCView";
-//
-//    _ycView = kLoadViewWithNIB(inden);
-//
-//    _ycView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
-//   
-//    _ycView.frame = (CGRect){0, 90 ,   W,  H - 258};
-//    [self.MyView addSubview:_ycView];
-//    
+    NSString *inden = @"FuWuView";
+
+    _zhongjianView = kLoadViewWithNIB(inden);
+
+    _zhongjianView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+   
+    _zhongjianView.frame = (CGRect){0, 90 ,   W,  H - 258};
+    [self.MyView addSubview:_zhongjianView];
+    
+    
+    
+    
     
     NSString *indenone = @"FujinView";
     
@@ -128,7 +127,7 @@
         [self.dataList addObject:[NSString stringWithFormat:@"%ld%@",(long)i,[self shuffledAlphabet]]];
     }
 
-    NSLog(@"%@",_dataList);
+    
 }
 
 - (NSString *)shuffledAlphabet {
@@ -180,8 +179,6 @@
     
     if (self.SearchController.active) {
         cell.NameLable.text = self.searchList[indexPath.section];
-       
-//    [cell.NameLable setText:self.searchList[indexPath.row]];
         
     }
     else{
