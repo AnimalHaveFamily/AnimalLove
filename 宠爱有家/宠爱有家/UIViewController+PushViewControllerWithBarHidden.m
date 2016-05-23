@@ -11,7 +11,7 @@
 @implementation UIViewController (PushViewControllerWithBarHidden)
 
 - (void)pushViewControllerWithTabBarHidden:(UIViewController *)vc{
-    
+          
     if (self.navigationController.viewControllers.count > 0) {
         vc.hidesBottomBarWhenPushed = YES;
     }
