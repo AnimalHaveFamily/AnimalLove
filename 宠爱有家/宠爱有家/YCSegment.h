@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+  
 typedef enum : NSUInteger {
     YLMySegmentDirectionLeft,
     YLMySegmentDirectionRight,
