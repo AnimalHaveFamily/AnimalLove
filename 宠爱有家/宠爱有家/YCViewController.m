@@ -25,8 +25,9 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"商店列表";
+//    self.view.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+
     _YcTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, W , H - 100) style:UITableViewStylePlain];
     _YcTableView.dataSource = self;
     _YcTableView.delegate = self;
