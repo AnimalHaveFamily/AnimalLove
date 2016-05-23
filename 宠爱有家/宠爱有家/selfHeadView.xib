@@ -48,6 +48,7 @@
                 <outlet property="headButton" destination="BuD-CW-Hbe" id="fSZ-Tj-Uyz"/>
                 <outlet property="headbtnHeight" destination="4LP-Lo-uCW" id="7cA-A6-h9V"/>
                 <outlet property="headbtnWidth" destination="Ui9-UY-bRi" id="o8o-j5-DYW"/>
+                <outlet property="loginBtn" destination="ByD-i4-Lq6" id="gpY-c5-ocS"/>
                 <outlet property="loginBtnWidth" destination="c2I-bv-Sbd" id="oXp-FL-u7T"/>
             </connections>
             <point key="canvasLocation" x="444.5" y="288"/>

@@ -8,6 +8,8 @@
 
 #import "LoginController.h"
 #import "UIViewController+addLeftOrRightBarButton.h"
+#import "UIViewController+AlertAction.h"
+#import "AnimalSigle.h"
 
 @interface LoginController ()
 {
@@ -36,24 +38,54 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     
     self.loginview.layer.cornerRadius = 8;
+   
 }
 
 - (void)backAction{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)LoginBtnAction:(id)sender {
+    
+    AnimalSigle *single = [AnimalSigle SelfMessage];
+
+    
+    if ([self.phoneTextFiled.text isEqualToString:@"123456"] && [self.PassWorldTextFiled.text isEqualToString:@"123456"]) {
+        single.username = self.phoneTextFiled.text;
+        single.password = self.PassWorldTextFiled.text;
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+    else
+        if ([self.phoneTextFiled.text isEqualToString:@""] || [self.PassWorldTextFiled.text isEqualToString:@""]) {
+            [self AlertMeaage:@"用户名或密码不能为空"];
+        }
+        else
+            if (self.PassWorldTextFiled.text.length <= 3){
+            [self AlertMeaage:@"密码不得小于3位"];
+        }
+    else
+    [self AlertMeaage:@"用户名或密码错误"];
+ 
+}
+
+
 - (IBAction)eyeAction:(id)sender {
 
     
     self.eyeBtn.selected = !self.eyeBtn.selected;
     self.PassWorldTextFiled.secureTextEntry = passwoeld;
     passwoeld = !passwoeld;
-    
-    
+   
 }
 
 - (void)registAction{
     NSLog(@"点击了注册按钮");
     
+}
+- (void)AlertMeaage:(NSString *)message{
+    [self AddAlertMessage:message Style:UIAlertControllerStyleAlert rightActionMessage:@"确定"rightActionEnd:nil leftActionMessage:nil leftActionEnd:nil];
 }
 
 

@@ -16,4 +16,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginBtnWidth;
 @property (nonatomic, strong)UIWindow *window;
 
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
+
+
+
 @end
