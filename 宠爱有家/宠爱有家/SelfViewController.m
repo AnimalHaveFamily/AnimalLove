@@ -12,6 +12,8 @@
 #import "selfTableViewCell.h"
 #import "InformationController.h"
 #import "UIViewController+PushViewControllerWithBarHidden.h"
+#import "selfHeadView.h"
+#import "AnimalSigle.h"
 
 @interface SelfViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -19,6 +21,20 @@
 @end
 
 @implementation SelfViewController
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    AnimalSigle *singel = [AnimalSigle SelfMessage];
+    
+    selfHeadView *headview = [[[NSBundle mainBundle] loadNibNamed:@"selfHeadView" owner:nil options:nil] lastObject];
+    if (![singel.username isEqualToString:@""]) {
+        [headview.loginBtn setTitle:singel.username forState:UIControlStateNormal];
+    }
+    _selfTableView.tableHeaderView = headview;
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,10 +49,7 @@
     [self.view addSubview:_selfTableView];
     
     [_selfTableView registerNib:[UINib nibWithNibName:@"selfTableViewCell" bundle:nil] forCellReuseIdentifier:@"selfcell"];
-    
-    UIView *headview = [[[NSBundle mainBundle] loadNibNamed:@"selfHeadView" owner:nil options:nil] lastObject];
-//    headview.frame = CGRectMake(0, 0, W, W / 2);
-    _selfTableView.tableHeaderView = headview;
+
     
 
     

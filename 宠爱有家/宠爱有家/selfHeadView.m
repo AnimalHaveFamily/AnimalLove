@@ -20,6 +20,8 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
+    
+    
     CGFloat headbtnW = W/4.5;
     
     self.loginBtnWidth.constant = headbtnW;
@@ -30,6 +32,7 @@
     self.headButton.layer.masksToBounds = YES;
     
     self.headButton.backgroundColor = [UIColor redColor];
+  
 }
 - (IBAction)photoBtnAction:(id)sender {
 //    AnimalSigle *sigle = [AnimalSigle SelfMessage];
@@ -38,10 +41,9 @@
 //    }
     
     [self choosePhotoBtnImage];
-    
  
-   
 }
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if (image) {
@@ -65,10 +67,13 @@
 }
 
 - (IBAction)LoginBtnAction:(id)sender {
-
+    AnimalSigle *single = [AnimalSigle SelfMessage];
+    if (![self.loginBtn.titleLabel.text isEqualToString:single.username]) {
     LoginController *loginvc = [[LoginController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginvc];
     [_window.rootViewController presentViewController:nav animated:YES completion:nil];
+    }
+    NSLog(@"已登录");
     
     
 }

@@ -11,6 +11,8 @@
 @interface AnimalSigle : NSObject
 @property (nonatomic ,copy)NSString *username;
 
+@property (nonatomic ,copy)NSString *password;
+
 + (id)SelfMessage;
 
 @end

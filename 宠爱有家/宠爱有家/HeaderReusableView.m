@@ -8,7 +8,7 @@
 
 #import "HeaderReusableView.h"
 #import "introduceCollectionViewCell.h"
-//#import "BannerViewController.h"
+
 
 
 @implementation HeaderReusableView
@@ -17,23 +17,8 @@
 
 - (void)awakeFromNib {
   
-    self.xihuBtn.layer.borderWidth = 1.0;
-    self.xihuBtn.layer.borderColor = [UIColor blackColor].CGColor;
-    
-    self.jiyangBtn.layer.borderWidth = 1.0;
-    self.jiyangBtn.layer.borderColor = [UIColor blackColor].CGColor;
-    self.HealthBtn.layer.borderWidth = 1.0;
-    self.HealthBtn.layer.borderColor = [UIColor blackColor].CGColor;
-    
-    self.MoreBtn.layer.borderWidth = 1.0;
-    self.MoreBtn.layer.borderColor = [UIColor blackColor].CGColor;
-    
-    
     [self.introduceCollectionview registerNib:[UINib nibWithNibName:@"introduceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
-    
-
-    
-
+  
     LCViewPagerView *viewPager = [[LCViewPagerView alloc] initWithFrame:CGRectMake(0, 0, self.bannerScrollView.frame.size.width, self.bannerScrollView.frame.size.height)];
     viewPager.delegate = self;
     viewPager.imageAry = @[@"con_banner1",@"con_banner2",@"con_banner3"];

@@ -21,6 +21,7 @@
     dispatch_once(&onceToken,^{
         message = [super allocWithZone:zone];
         message.username = @"";
+        message.password = @"";
     });
     return message;
 
