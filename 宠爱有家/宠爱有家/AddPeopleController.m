@@ -44,14 +44,6 @@
     actionSure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
     }];
-    
-
-    
-
-    
-    
-    
-
 }
 
 - (NSArray *)messageArr{
