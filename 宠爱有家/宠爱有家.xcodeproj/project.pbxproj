@@ -31,7 +31,6 @@
 		2273146D1CF148E8009FF007 /* AdressNoMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273146C1CF148E8009FF007 /* AdressNoMessageView.m */; };
 		2273146F1CF14909009FF007 /* AdressNoMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273146E1CF14909009FF007 /* AdressNoMessageView.xib */; };
 		227314751CF19411009FF007 /* YCSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 227314711CF18FB3009FF007 /* YCSegment.m */; };
-		227314771CF19BE2009FF007 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227314761CF19BE2009FF007 /* Images.xcassets */; };
 		2273147D1CF1AAEA009FF007 /* UIViewController+AlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273147C1CF1AAEA009FF007 /* UIViewController+AlertAction.m */; };
 		2275ED691CEC8804003E8CA6 /* InformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED671CEC8804003E8CA6 /* InformationController.m */; };
 		2275ED6D1CEC9570003E8CA6 /* NameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275ED6C1CEC9570003E8CA6 /* NameController.m */; };
@@ -146,7 +145,6 @@
 		2273146E1CF14909009FF007 /* AdressNoMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdressNoMessageView.xib; sourceTree = "<group>"; };
 		227314711CF18FB3009FF007 /* YCSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSegment.m; sourceTree = "<group>"; };
 		227314741CF18FE8009FF007 /* YCSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSegment.h; sourceTree = "<group>"; };
-		227314761CF19BE2009FF007 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2273147B1CF1AAEA009FF007 /* UIViewController+AlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AlertAction.h"; sourceTree = "<group>"; };
 		2273147C1CF1AAEA009FF007 /* UIViewController+AlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AlertAction.m"; sourceTree = "<group>"; };
 		2275ED661CEC8804003E8CA6 /* InformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationController.h; sourceTree = "<group>"; };
@@ -419,7 +417,6 @@
 				22E7109F1CDB42F700B584B5 /* 服务 */,
 				22E7109E1CDB42F600B584B5 /* 我的 */,
 				22E7109D1CDB42F100B584B5 /* 其它 */,
-				227314761CF19BE2009FF007 /* Images.xcassets */,
 				22E7106A1CDB425400B584B5 /* Supporting Files */,
 			);
 			path = "宠爱有家";
@@ -749,7 +746,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				226328461CDC6F2A00BB023B /* introduceCollectionViewCell.xib in Resources */,
-				227314771CF19BE2009FF007 /* Images.xcassets in Resources */,
 				2263284B1CDC76A800BB023B /* MainCollectionViewCell.xib in Resources */,
 				22956CB81CE5A8E000A503E7 /* LocationTableCell.xib in Resources */,
 				22E30A4C1CEB3571008A0EF3 /* selfTableViewCell.xib in Resources */,
@@ -1040,6 +1036,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SMS_SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/宠爱有家/AnimalPCH.pch";
 				INFOPLIST_FILE = "宠爱有家/Info.plist";
@@ -1061,6 +1061,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SMS_SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/宠爱有家/AnimalPCH.pch";
 				INFOPLIST_FILE = "宠爱有家/Info.plist";
