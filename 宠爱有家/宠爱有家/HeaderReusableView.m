@@ -23,8 +23,6 @@
     viewPager.delegate = self;
     viewPager.imageAry = @[@"con_banner1",@"con_banner2",@"con_banner3"];
     [self addSubview:viewPager];
-    
-
 
 }
 

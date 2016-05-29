@@ -14,10 +14,15 @@
 #import "UIViewController+PushViewControllerWithBarHidden.h"
 #import "selfHeadView.h"
 #import "AnimalSigle.h"
+#import "UIImageView+WebCache.h"
+
+#import "UIButton+WebCache.h"
+
 
 @interface SelfViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong)UITableView *selfTableView;
+@property (nonatomic,strong)AnimalSigle *singel;
 @end
 
 @implementation SelfViewController
@@ -25,12 +30,18 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     
-    AnimalSigle *singel = [AnimalSigle SelfMessage];
+    _singel = [AnimalSigle SelfMessage];
     
     selfHeadView *headview = [[[NSBundle mainBundle] loadNibNamed:@"selfHeadView" owner:nil options:nil] lastObject];
-    if (![singel.username isEqualToString:@""]) {
-        [headview.loginBtn setTitle:singel.username forState:UIControlStateNormal];
+    if (_singel.username) {
+        
+        [headview.loginBtn setTitle:@"登陆/注册" forState:UIControlStateNormal];
+        if (![_singel.username isEqualToString:@""]) {
+            [headview.loginBtn setTitle:_singel.username forState:UIControlStateNormal];
+            [headview.headButton sd_setImageWithURL:[NSURL URLWithString:_singel.headPhoto] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"QQ-1"]];
+        }
     }
+    
     _selfTableView.tableHeaderView = headview;
     
 }
@@ -42,18 +53,15 @@
    
     self.navigationItem.title = @"我的";
     
-    _selfTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+    _selfTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, W, H) style:UITableViewStylePlain];
+    _selfTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _selfTableView.dataSource = self;
     _selfTableView.delegate = self;
     _selfTableView.bounces = NO;
     [self.view addSubview:_selfTableView];
     
     [_selfTableView registerNib:[UINib nibWithNibName:@"selfTableViewCell" bundle:nil] forCellReuseIdentifier:@"selfcell"];
-
-    
-
-    
-    
+  
 }
 
 
@@ -92,10 +100,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+      NSLog(@"_singel.username == %@",_singel.username);
+    
+    
+    if ([_singel.username isEqualToString:@""] || !_singel.username) {
+        LoginController *login = [[LoginController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:login];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+    else
+    {
+    
+   
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     InformationController *informationVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"InformationController"];
 
     [self pushViewControllerWithTabBarHidden:informationVC];
+    }
     
 }
 
@@ -104,10 +125,7 @@
 - (void)setAction{
     
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -11,13 +11,18 @@
 #import "LocationTableCell.h"
 #import "LocationHeadView.h"
 #import <sqlite3.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 
-@interface LocationViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
+@interface LocationViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate,CLLocationManagerDelegate>
 {
     LocationTableCell *cell;
+    LocationHeadView *headview;
+    
 }
 
+@property (nonatomic ,strong)CLLocationManager *locationManager;
 @property (nonatomic ,strong)UITableView *LocationTableView;
 @property (nonatomic ,strong)NSMutableArray *CityArr;
 @property (nonatomic ,strong)NSMutableArray *MainArr;
@@ -30,10 +35,31 @@
 
 sqlite3 *_db = NULL;
 
+- (CLLocationManager *)locationManager{
+    if (!_locationManager) {
+        _locationManager = [[CLLocationManager alloc] init];
+        
+    }
+    return _locationManager;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"选择地区";
+    
+    self.locationManager.delegate = self;
+    
+    [self.locationManager startUpdatingLocation];//开启定位
+
+    if (![CLLocationManager locationServicesEnabled]) {
+        NSLog(@"没有获取位置信息的设备");
+        return;
+    }
+    
+
+
+    
     
     [self addLeftBtnImageName:@"nav_search_icon" action:@selector(BackAction)];
     _MainArr = [[NSMutableArray alloc] initWithCapacity:0];
@@ -49,7 +75,64 @@ sqlite3 *_db = NULL;
     [self CreatSqlite];
     
     [_LocationTableView registerNib:[UINib nibWithNibName:@"LocationTableCell" bundle:nil] forCellReuseIdentifier:@"Locationcell"];
+
+#ifdef __IPHONE_8_0
+    
+    [_locationManager requestAlwaysAuthorization];
+#else
+    [_locationManager startUpdatingLocation];
+#endif
+    
 }
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations{
+    
+//    NSLog(@"经度＝%f",((CLLocation *)[locations lastObject]).coordinate.longitude);
+//    
+//    NSLog(@"纬度＝%f",((CLLocation *)[locations lastObject]).coordinate.latitude);
+
+    //地理位置反编码
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:[locations lastObject] completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (placemarks.count > 0) {
+            CLPlacemark *placeMark = [placemarks objectAtIndex:0];
+            NSLog(@"详细地址 = %@",placeMark.name);
+            
+            headview.nowLocation.text = placeMark.name;
+            NSString *city = placeMark.locality;
+            if (!city) {
+                city = placeMark.administrativeArea;
+            }
+            NSLog(@"city = %@",city);
+            [headview.nowButton setTitle:city forState:UIControlStateNormal];
+        }
+        
+        /*
+        [placemarks enumerateObjectsUsingBlock:^(CLPlacemark * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"%@",obj.locality);
+        }];
+         */
+        
+    }];
+    
+    [manager stopUpdatingLocation];
+}
+
+
+- (void)setHeadView{
+    headview = [[[NSBundle mainBundle] loadNibNamed:@"LocationHeadView" owner:nil options:nil] lastObject];
+    
+    _LocationTableView.tableHeaderView = headview;
+    
+    typeof(self) myself = self;
+    headview.LocationBlock = ^(NSString *str){
+        [myself dismissViewControllerAnimated:YES completion:nil];
+        myself.MyBlock(str);
+        
+    };
+}
+
 
 
 
@@ -85,7 +168,7 @@ sqlite3 *_db = NULL;
     NSArray *cityAry = [tempDict objectForKey:@"cityAry"];
     NSString *cityName = cityAry[indexPath.row];
     cell.cityLable.text = cityName;
-    self.MyBlock(cityName);
+//    self.MyBlock(cityName);
     return cell;
 }
 
@@ -112,11 +195,7 @@ sqlite3 *_db = NULL;
             NSLog(@"拷贝成功");
         }
     }
-    
-
-    
-//    NSString *filePath = @"/Users/xxxx/Desktop/AnimalLove/宠爱有家/city.sqlite";
-    
+ 
     int open = sqlite3_open(sqlithPath.UTF8String, &_db);
     if (open == SQLITE_OK) {
         NSLog(@"打开成功");
@@ -175,22 +254,10 @@ sqlite3 *_db = NULL;
         sqlite3_finalize(cityStmt);
         sqlite3_finalize(proStmt);
     }
-    //    NSLog(@"_MainArr == %@",_MainArr);
-    
 }
 
 
 
-- (void)setHeadView{
-    LocationHeadView *headview = [[[NSBundle mainBundle] loadNibNamed:@"LocationHeadView" owner:nil options:nil] lastObject];
-    _LocationTableView.tableHeaderView = headview;
-    
-    headview.LocationBlock = ^(NSString *str){
-        [self dismissViewControllerAnimated:YES completion:nil];
-        self.MyBlock(str);
-        
-    };
-}
 
 - (void)BackAction{
     [self dismissViewControllerAnimated:YES completion:nil];

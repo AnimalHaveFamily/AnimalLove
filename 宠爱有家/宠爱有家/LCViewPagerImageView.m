@@ -12,6 +12,8 @@
 
 @end
 
+
+
 @implementation LCViewPagerImageView
 - (instancetype)initWithFrame:(CGRect)frame
 {

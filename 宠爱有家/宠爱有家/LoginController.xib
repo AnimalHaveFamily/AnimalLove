@@ -155,6 +155,9 @@
                         <constraint firstAttribute="width" constant="46" id="He9-xB-FML"/>
                     </constraints>
                     <state key="normal" title="Button" image="QQ-1"/>
+                    <connections>
+                        <action selector="QQAction:" destination="-1" eventType="touchUpInside" id="tLf-If-kYL"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-FL-CKI">
                     <rect key="frame" x="212" y="493" width="46" height="46"/>
@@ -165,6 +168,9 @@
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="zZ5-81-iRJ"/>
                     </constraints>
                     <state key="normal" title="Button" image="weixin-1"/>
+                    <connections>
+                        <action selector="wechatAction:" destination="-1" eventType="touchUpInside" id="k03-ht-DLp"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qx2-cI-RJr">
                     <rect key="frame" x="50" y="493" width="46" height="46"/>
@@ -175,6 +181,9 @@
                         <constraint firstAttribute="width" constant="46" id="tNa-A9-Ypl"/>
                     </constraints>
                     <state key="normal" title="Button" image="sina-1"/>
+                    <connections>
+                        <action selector="sinaAction:" destination="-1" eventType="touchUpInside" id="EE0-2C-eUg"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

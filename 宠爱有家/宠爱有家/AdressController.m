@@ -27,6 +27,7 @@
 
 
 - (void)AddMessage:(NSMutableDictionary *)dic{
+    
     [_SaveArr addObject:dic];
     [self.MainTableView reloadData];
     

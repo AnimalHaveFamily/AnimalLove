@@ -22,6 +22,7 @@
         message = [super allocWithZone:zone];
         message.username = @"";
         message.password = @"";
+        message.headPhoto = @"";
     });
     return message;
 

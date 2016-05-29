@@ -9,19 +9,20 @@
 #import "InformationController.h"
 #import "AdressController.h"
 #import "UIViewController+PushViewControllerWithBarHidden.h"
+#import "UIViewController+AlertAction.h"
+#import "UIImageView+WebCache.h"
+
 
 @interface InformationController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (nonatomic ,strong)AnimalSigle *mySingle;
 
 @end
 
 @implementation InformationController
 
-//- (UIImagePickerController *)ImagePicker{
-//    if (!_ImagePicker) {
-//        _ImagePicker = [[UIImagePickerController alloc] init];
-//            }
-//    return _ImagePicker;
-//}
+- (void)viewWillAppear:(BOOL)animated{
+   
+}
 
 
 - (void)viewDidLayoutSubviews{
@@ -29,12 +30,18 @@
     self.headImgView.layer.cornerRadius = 51 / 2;
     self.headImgView.layer.masksToBounds = YES;
     self.footView.backgroundColor = ViewBackColor;
-    
+    self.logoutButton.layer.cornerRadius = 8;
+   
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.nameLable.text = @"哈哈";
+    
+    
+    _mySingle = [AnimalSigle SelfMessage];
+ 
+    [self.headImgView sd_setImageWithURL:[NSURL URLWithString:_mySingle.headPhoto] placeholderImage:[UIImage imageNamed:@"QQ-1"]];
+    self.nameLable.text = _mySingle.username;
 }
 
 
@@ -47,10 +54,24 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)logoutBtnAction:(id)sender {
+    
+    [self AddAlertTitle:@"温馨提示" Message:@"确定要注销当前账号吗?" Style:UIAlertControllerStyleAlert rightActionMessage:@"确定"rightActionEnd:^(UIAlertAction *action) {
+        
+        _mySingle.username = nil;
+        _mySingle.headPhoto = nil;
+        _mySingle.password = nil;
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } leftActionMessage:@"取消" leftActionEnd:nil CancelActionMessage:nil cancelActionEnd:nil];
+    
+   
 }
+
+
+
 
 #pragma mark - Table view data source
 
@@ -62,37 +83,17 @@
     
     
     if (indexPath.section == 0 && indexPath.row == 0) {
-
-        UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         
         
-        
-        UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"点击了拍照按钮");
-        }];
-        UIAlertAction *usePhotoAction = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self AddAlertTitle:nil Message:nil Style:UIAlertControllerStyleActionSheet rightActionMessage:@"从手机相册选取" rightActionEnd:^(UIAlertAction *action) {
+            [self ChosePhotoWithSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
             
-            _ImagePicker = [[UIImagePickerController alloc] init];
-            _ImagePicker.delegate = self;
-            _ImagePicker.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-            _ImagePicker.allowsEditing = YES;
-            //点击之后是否确认选择
-            _ImagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        } leftActionMessage:@"拍照" leftActionEnd:^(UIAlertAction *action) {
+            [self ChosePhotoWithSourceType:UIImagePickerControllerSourceTypeCamera];
             
-            [self presentViewController:_ImagePicker animated:YES completion:nil];
-            
-        }];
-
-        
-        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-        }];
-        [alertvc addAction:takePhotoAction];
-        [alertvc addAction:usePhotoAction];
-        [alertvc addAction:cancleAction];
-        [self presentViewController:alertvc animated:YES completion:nil];
-   
+        } CancelActionMessage:@"取消" cancelActionEnd:nil];
     }
+
     
     if (indexPath.section == 1 && indexPath.row == 2) {
         AdressController *adressVC = [[AdressController alloc] init];
@@ -103,5 +104,22 @@
     
 }
 
+- (void)ChosePhotoWithSourceType:(UIImagePickerControllerSourceType)type{
+    _ImagePicker = [[UIImagePickerController alloc] init];
+    _ImagePicker.delegate = self;
+    _ImagePicker.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    _ImagePicker.allowsEditing = YES;
+    //点击之后是否确认选择
+    _ImagePicker.sourceType = type;
+    
+    [self presentViewController:_ImagePicker animated:YES completion:nil];
+    
+
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end

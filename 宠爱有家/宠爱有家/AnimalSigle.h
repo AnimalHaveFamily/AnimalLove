@@ -13,6 +13,8 @@
 
 @property (nonatomic ,copy)NSString *password;
 
+@property (nonatomic ,copy)NSString *headPhoto;
+
 + (id)SelfMessage;
 
 @end

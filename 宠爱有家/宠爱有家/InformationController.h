@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AnimalSigle.h"
 
 @interface InformationController : UITableViewController
 @property (weak, nonatomic) IBOutlet UITableViewCell *headPhotoCell;
@@ -15,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLable;
 @property (weak, nonatomic) IBOutlet UIView *footView;
 
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+
+
 
 @property (nonatomic,strong)UIImagePickerController *ImagePicker;
+
 @end

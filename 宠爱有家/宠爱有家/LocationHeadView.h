@@ -17,6 +17,8 @@ typedef void (^LocationBtnBlock)(NSString *str);
 @property (weak, nonatomic) IBOutlet UIView *SearchBarView;
 @property (weak, nonatomic) IBOutlet UISearchBar *SearchBar;
 @property (weak, nonatomic) IBOutlet UIView *lightView;
+@property (weak, nonatomic) IBOutlet UILabel *nowLocation;
+@property (weak, nonatomic) IBOutlet UIButton *nowButton;
 
 
 

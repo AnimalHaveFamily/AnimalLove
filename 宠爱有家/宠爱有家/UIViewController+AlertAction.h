@@ -10,7 +10,7 @@
 
 @interface UIViewController (AlertAction)
 
-- (void)AddAlertMessage:(NSString *)string Style:(UIAlertControllerStyle)Style rightActionMessage:(NSString *)rightTitle rightActionEnd:(void (^ __nullable)(UIAlertAction *action))handler leftActionMessage:(NSString *)leftTitle leftActionEnd:(void (^ __nullable)(UIAlertAction *action))leftHandler;
+- (void)AddAlertTitle:(NSString *)title Message:(NSString *)string Style:(UIAlertControllerStyle)Style rightActionMessage:(NSString *)rightTitle rightActionEnd:(void (^ __nullable)(UIAlertAction *action))handler leftActionMessage:(NSString *)leftTitle leftActionEnd:(void (^ __nullable)(UIAlertAction *action))leftHandler CancelActionMessage:(NSString *)cancletitle cancelActionEnd:(void (^ __nullable)(UIAlertAction *action))cancle;
 
 
 @end

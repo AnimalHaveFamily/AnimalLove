@@ -31,8 +31,7 @@
     self.headButton.layer.cornerRadius = headbtnW / 2;
     self.headButton.layer.masksToBounds = YES;
     
-    self.headButton.backgroundColor = [UIColor redColor];
-  
+
 }
 - (IBAction)photoBtnAction:(id)sender {
 //    AnimalSigle *sigle = [AnimalSigle SelfMessage];
@@ -47,7 +46,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if (image) {
-        [_headButton setBackgroundImage:image forState:UIControlStateNormal];
+//        [_headButton setBackgroundImage:image forState:UIControlStateNormal];
+        [_headButton setImage:image forState:UIControlStateNormal];
         
         
     }
@@ -73,9 +73,6 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginvc];
     [_window.rootViewController presentViewController:nav animated:YES completion:nil];
     }
-    NSLog(@"已登录");
-    
-    
 }
 
 

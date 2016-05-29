@@ -10,9 +10,9 @@
 
 @implementation UIViewController (AlertAction)
 
-- (void)AddAlertMessage:(NSString *)string Style:(UIAlertControllerStyle)Style rightActionMessage:(NSString *)rightTitle rightActionEnd:(void (^ __nullable)(UIAlertAction *action))handler leftActionMessage:(NSString *)leftTitle leftActionEnd:(void (^ __nullable)(UIAlertAction *action))leftHandler{
+- (void)AddAlertTitle:(NSString *)title Message:(NSString *)string Style:(UIAlertControllerStyle)Style rightActionMessage:(NSString *)rightTitle rightActionEnd:(void (^ __nullable)(UIAlertAction *action))handler leftActionMessage:(NSString *)leftTitle leftActionEnd:(void (^ __nullable)(UIAlertAction *action))leftHandler CancelActionMessage:(NSString *)cancletitle cancelActionEnd:(void (^ __nullable)(UIAlertAction *action))cancle{
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"警告" message:string preferredStyle:Style];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:string preferredStyle:Style];
     
     if (leftTitle) {
         UIAlertAction *leftAction = [UIAlertAction actionWithTitle:leftTitle style:UIAlertActionStyleDefault handler:leftHandler];
@@ -25,6 +25,13 @@
         
         [alertController addAction:rightAction];
     }
+    
+    if (cancletitle) {
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancletitle style:UIAlertActionStyleCancel handler:cancle];
+        [alertController addAction:cancelAction];
+    }
+    
+    
 
     [self presentViewController:alertController animated:YES completion:nil];
     

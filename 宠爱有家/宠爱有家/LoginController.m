@@ -10,12 +10,17 @@
 #import "UIViewController+addLeftOrRightBarButton.h"
 #import "UIViewController+AlertAction.h"
 #import "AnimalSigle.h"
+#import "RegistController.h"
+#import "UIViewController+PushViewControllerWithBarHidden.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <ShareSDKExtension/SSEThirdPartyLoginHelper.h>
 
 @interface LoginController ()
 {
     BOOL passwoeld;
 }
-
+@property (nonatomic ,strong)AnimalSigle *singlee;
 @end
 
 @implementation LoginController
@@ -38,6 +43,8 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     
     self.loginview.layer.cornerRadius = 8;
+    
+    _singlee = [AnimalSigle SelfMessage];
    
 }
 
@@ -49,15 +56,6 @@
     
     AnimalSigle *single = [AnimalSigle SelfMessage];
 
-    
-    if ([self.phoneTextFiled.text isEqualToString:@"123456"] && [self.PassWorldTextFiled.text isEqualToString:@"123456"]) {
-        single.username = self.phoneTextFiled.text;
-        single.password = self.PassWorldTextFiled.text;
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    
-    else
         if ([self.phoneTextFiled.text isEqualToString:@""] || [self.PassWorldTextFiled.text isEqualToString:@""]) {
             [self AlertMeaage:@"用户名或密码不能为空"];
         }
@@ -66,6 +64,11 @@
             [self AlertMeaage:@"密码不得小于3位"];
         }
     else
+        if ([self.phoneTextFiled.text isEqualToString:single.username] && [self.PassWorldTextFiled.text isEqualToString:single.password]) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    else
+        
     [self AlertMeaage:@"用户名或密码错误"];
  
 }
@@ -81,11 +84,105 @@
 }
 
 - (void)registAction{
-    NSLog(@"点击了注册按钮");
+    RegistController *registVc = [[RegistController alloc] init];
+    [self pushViewControllerWithTabBarHidden:registVc];
     
 }
 - (void)AlertMeaage:(NSString *)message{
-    [self AddAlertMessage:message Style:UIAlertControllerStyleAlert rightActionMessage:@"确定"rightActionEnd:nil leftActionMessage:nil leftActionEnd:nil];
+
+    [self AddAlertTitle:@"警告" Message:message Style:UIAlertControllerStyleAlert rightActionMessage:@"确定" rightActionEnd:nil leftActionMessage:nil leftActionEnd:nil CancelActionMessage:nil cancelActionEnd:nil];
+}
+
+- (IBAction)sinaAction:(id)sender {
+    
+    [ShareSDK getUserInfo:SSDKPlatformTypeSinaWeibo onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+        if (state == SSDKResponseStateSuccess) {
+            NSLog(@"uid == %@",user.uid);
+            
+            NSLog(@"授权凭证%@",user.credential);
+            //为nil代表未授权
+            
+            NSLog(@"token == %@",user.credential.token);
+            //用户令牌
+            
+            NSLog(@"nickname = %@",user.nickname);
+            //昵称
+        }
+        else{
+            NSLog(@"错误信息:%@",error);
+        }
+    }];
+
+}
+
+
+- (IBAction)QQAction:(id)sender {
+    [ShareSDK getUserInfo:SSDKPlatformTypeQQ onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+        if (state == SSDKResponseStateSuccess) {
+            NSLog(@"uid == %@",user.uid);
+            
+            NSLog(@"授权凭证%@",user.credential);
+            //为nil代表未授权
+            
+            NSLog(@"用户令牌 == %@",user.credential.token);
+            
+            
+            NSLog(@"昵称 = %@",user.nickname);
+            
+            
+            NSLog(@"省 = %@",[user.rawData objectForKey:@"province"]);
+            
+            NSLog(@"city = %@",[user.rawData objectForKey:@"city"]);
+            
+            NSLog(@"关于我 = %@",user.aboutMe);
+            
+            
+            NSLog(@"头像= %@",user.rawData);
+            
+            
+            
+            _singlee.username = user.nickname;
+            _singlee.headPhoto = [user.rawData objectForKey:@"figureurl_qq_2"];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        else{
+            NSLog(@"错误信息:%@",error);
+        }
+    }];
+}
+
+- (IBAction)wechatAction:(id)sender {
+    
+    [ShareSDK getUserInfo:SSDKPlatformTypeWechat onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+        if (state == SSDKResponseStateSuccess) {
+            NSLog(@"uid == %@",user.uid);
+            
+            NSLog(@"授权凭证%@",user.credential);
+            //为nil代表未授权
+            
+            NSLog(@"token == %@",user.credential.token);
+            //用户令牌
+            
+            NSLog(@"nickname = %@",user.nickname);
+            //昵称
+        }else{
+            NSLog(@"错误:%@",error);
+        }
+    }];
+//    [SSEThirdPartyLoginHelper loginByPlatform:SSDKPlatformTypeWechat onUserSync:^(SSDKUser *user, SSEUserAssociateHandler associateHandler) {
+//        associateHandler(user.uid,user,user);
+//        NSLog(@"dd%@",user.rawData);
+//        NSLog(@"授权凭证%@",user.credential);
+//        
+//    } onLoginResult:^(SSDKResponseState state, SSEBaseUser *user, NSError *error) {
+//        if (state == SSDKResponseStateSuccess) {
+//            
+//        }
+//    }];
+    
+    
+    
+    
 }
 
 
