@@ -55,6 +55,6 @@
         </view>
     </objects>
     <resources>
-        <image name="QQ-1" width="104" height="104"/>
+        <image name="QQ-1" width="87" height="87"/>
     </resources>
 </document>

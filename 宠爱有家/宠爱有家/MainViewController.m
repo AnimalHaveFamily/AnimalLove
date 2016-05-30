@@ -39,17 +39,6 @@
     [self creatSearchBtn];
     [self createLocationBtn];
 
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
 
     layout = [[UICollectionViewFlowLayout alloc] init];
     
@@ -74,7 +63,7 @@
 
     
     UIView *titleview = [[[NSBundle mainBundle] loadNibNamed:@"SearchBackView" owner:nil options:nil] lastObject];
-    [titleview setBackgroundColor:Animalcolor];
+    titleview.backgroundColor = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:0];
     [self.navigationItem.titleView sizeToFit];
     self.navigationItem.titleView = titleview;
     
@@ -83,14 +72,8 @@
     
     leftBtnView *view = [[[NSBundle mainBundle] loadNibNamed:@"leftBtnView" owner:nil options:nil] lastObject];
     view.frame = CGRectMake(0, 0, 50, 30);
-    view.backgroundColor = Animalcolor;
-    
-    
-    
+    view.backgroundColor = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:0];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
-    
-    
-    
 }
 
 

@@ -15,6 +15,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 #import <ShareSDKExtension/SSEThirdPartyLoginHelper.h>
+#import "MBProgressHUD.h"
 
 @interface LoginController ()
 {
@@ -97,51 +98,37 @@
     
     [ShareSDK getUserInfo:SSDKPlatformTypeSinaWeibo onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
         if (state == SSDKResponseStateSuccess) {
-            NSLog(@"uid == %@",user.uid);
+
+            _singlee.username = user.nickname;
+            _singlee.headPhoto = [user.rawData objectForKey:@"avatar_hd"];
+            [self addLoginView];
+  
+            [self dismissViewControllerAnimated:YES completion:nil];
             
-            NSLog(@"授权凭证%@",user.credential);
-            //为nil代表未授权
-            
-            NSLog(@"token == %@",user.credential.token);
-            //用户令牌
-            
-            NSLog(@"nickname = %@",user.nickname);
-            //昵称
+//            NSLog(@"uid == %@",user.uid);
+//            
+//            NSLog(@"授权凭证%@",user.credential);
+//            //为nil代表未授权
+//            
+//            NSLog(@"token == %@",user.credential.token);
+//            //用户令牌
+//            
+//            NSLog(@"昵称 = %@",user.nickname);
+//            //昵称
+//            
+//            NSLog(@"头像= %@",user.rawData);
         }
         else{
             NSLog(@"错误信息:%@",error);
         }
     }];
-
 }
 
 
 - (IBAction)QQAction:(id)sender {
     [ShareSDK getUserInfo:SSDKPlatformTypeQQ onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
         if (state == SSDKResponseStateSuccess) {
-            NSLog(@"uid == %@",user.uid);
-            
-            NSLog(@"授权凭证%@",user.credential);
-            //为nil代表未授权
-            
-            NSLog(@"用户令牌 == %@",user.credential.token);
-            
-            
-            NSLog(@"昵称 = %@",user.nickname);
-            
-            
-            NSLog(@"省 = %@",[user.rawData objectForKey:@"province"]);
-            
-            NSLog(@"city = %@",[user.rawData objectForKey:@"city"]);
-            
-            NSLog(@"关于我 = %@",user.aboutMe);
-            
-            
-            NSLog(@"头像= %@",user.rawData);
-            
-            
-            
-            _singlee.username = user.nickname;
+                       _singlee.username = user.nickname;
             _singlee.headPhoto = [user.rawData objectForKey:@"figureurl_qq_2"];
             [self dismissViewControllerAnimated:YES completion:nil];
         }
@@ -155,36 +142,20 @@
     
     [ShareSDK getUserInfo:SSDKPlatformTypeWechat onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
         if (state == SSDKResponseStateSuccess) {
-            NSLog(@"uid == %@",user.uid);
-            
-            NSLog(@"授权凭证%@",user.credential);
-            //为nil代表未授权
-            
-            NSLog(@"token == %@",user.credential.token);
-            //用户令牌
-            
-            NSLog(@"nickname = %@",user.nickname);
-            //昵称
-        }else{
+                   }else{
             NSLog(@"错误:%@",error);
         }
     }];
-//    [SSEThirdPartyLoginHelper loginByPlatform:SSDKPlatformTypeWechat onUserSync:^(SSDKUser *user, SSEUserAssociateHandler associateHandler) {
-//        associateHandler(user.uid,user,user);
-//        NSLog(@"dd%@",user.rawData);
-//        NSLog(@"授权凭证%@",user.credential);
-//        
-//    } onLoginResult:^(SSDKResponseState state, SSEBaseUser *user, NSError *error) {
-//        if (state == SSDKResponseStateSuccess) {
-//            
-//        }
-//    }];
-    
-    
-    
-    
+   
 }
 
+-(void)addLoginView{
+    MBProgressHUD *proHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    proHUD.labelText = @"正在登录中...";
+    proHUD.color = [UIColor grayColor];
+    proHUD.mode = MBProgressHUDModeCustomView;
+    [proHUD hide:YES afterDelay:1.5];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

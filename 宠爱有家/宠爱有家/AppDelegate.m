@@ -77,7 +77,7 @@
 
     [appInfo SSDKSetupSinaWeiboByAppKey:@"3993364247"
                                           appSecret:@"d05e710117854a1b6879d5b14fddf1e3"
-                                        redirectUri:@"http://www.sharesdk.cn"
+                                        redirectUri:@"http://www.boqii.com/?utm_source=baidu-pinzhuan&utm_medium=cpc&utm_campaign=%E6%A0%87%E9%A2%98"
                                            authType:SSDKAuthTypeBoth];
                 break;
        case SSDKPlatformTypeWechat:

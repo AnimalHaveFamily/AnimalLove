@@ -49,12 +49,7 @@
         [_MainTableView registerNib:[UINib nibWithNibName:@"MainTableViewCell" bundle:nil] forCellReuseIdentifier:@"MainCell"];
 
     }
-       
-    
-
-
-
-   
+ 
 }
 
 - (void)viewDidLoad {

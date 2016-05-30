@@ -17,13 +17,13 @@
                         <constraint firstAttribute="width" constant="20" id="IW3-Jp-ob2"/>
                     </constraints>
                     <connections>
-                        <action selector="LoacationAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yt1-g0-K9M"/>
+                        <action selector="OtherAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="b5g-qx-HCU"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgR-8X-HAl">
                     <rect key="frame" x="11" y="0.0" width="158" height="48"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="洛阳"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="定位"/>
                     <connections>
                         <action selector="OtherAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="REL-5Z-GqT"/>
                     </connections>

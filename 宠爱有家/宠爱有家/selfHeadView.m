@@ -34,10 +34,10 @@
 
 }
 - (IBAction)photoBtnAction:(id)sender {
-//    AnimalSigle *sigle = [AnimalSigle SelfMessage];
-//    if ([sigle.username isEqualToString:@""]) {
-//        [self LoginBtnAction:sender];
-//    }
+    AnimalSigle *sigle = [AnimalSigle SelfMessage];
+    if ([sigle.username isEqualToString:@""]) {
+        [self LoginBtnAction:sender];
+    }
     
     [self choosePhotoBtnImage];
  

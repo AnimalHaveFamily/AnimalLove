@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="268" height="437"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QQ-1" translatesAutoresizingMaskIntoConstraints="NO" id="j0T-QR-8kO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QQ" translatesAutoresizingMaskIntoConstraints="NO" id="j0T-QR-8kO">
                     <rect key="frame" x="78" y="191" width="112" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="112" id="6aN-fr-i4s"/>
@@ -44,6 +44,6 @@
         </view>
     </objects>
     <resources>
-        <image name="QQ-1" width="104" height="104"/>
+        <image name="QQ" width="104" height="104"/>
     </resources>
 </document>

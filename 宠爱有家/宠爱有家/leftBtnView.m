@@ -14,12 +14,9 @@
 
 - (void)awakeFromNib{
     [self.btn setImage:[UIImage imageNamed:@"nav_location_icon"] forState:UIControlStateNormal];
-
-    
+  
 }
-- (IBAction)LoacationAction:(id)sender {   
 
-}
 - (IBAction)OtherAction:(id)sender {
     LocationViewController *locationVC = [[LocationViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:locationVC];

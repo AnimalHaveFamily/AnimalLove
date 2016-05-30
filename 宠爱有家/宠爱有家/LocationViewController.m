@@ -58,9 +58,6 @@ sqlite3 *_db = NULL;
     }
     
 
-
-    
-    
     [self addLeftBtnImageName:@"nav_search_icon" action:@selector(BackAction)];
     _MainArr = [[NSMutableArray alloc] initWithCapacity:0];
     
@@ -97,7 +94,7 @@ sqlite3 *_db = NULL;
     [geocoder reverseGeocodeLocation:[locations lastObject] completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         if (placemarks.count > 0) {
             CLPlacemark *placeMark = [placemarks objectAtIndex:0];
-            NSLog(@"详细地址 = %@",placeMark.name);
+//            NSLog(@"详细地址 = %@",placeMark.name);
             
             headview.nowLocation.text = placeMark.name;
             NSString *city = placeMark.locality;
@@ -135,8 +132,6 @@ sqlite3 *_db = NULL;
 
 
 
-
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 15;
 }
@@ -168,13 +163,15 @@ sqlite3 *_db = NULL;
     NSArray *cityAry = [tempDict objectForKey:@"cityAry"];
     NSString *cityName = cityAry[indexPath.row];
     cell.cityLable.text = cityName;
-//    self.MyBlock(cityName);
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    
-    
+
+    NSArray *arr = [_MainArr[indexPath.section] objectForKey:@"cityAry"];
+    NSString *cityStr = arr[indexPath.row];
+    self.MyBlock(cityStr);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)CreatSqlite{
@@ -254,6 +251,7 @@ sqlite3 *_db = NULL;
         sqlite3_finalize(cityStmt);
         sqlite3_finalize(proStmt);
     }
+
 }
 
 
