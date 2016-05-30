@@ -181,7 +181,7 @@ sqlite3 *_db = NULL;
     NSString *sqlithPath = [documentPath stringByAppendingPathComponent:@"my.sqlite"];
     //沙盒路径
     
-    
+    //
     NSString *dapath = [[NSBundle mainBundle] pathForResource:@"city" ofType:@"sqlite"];
     
     NSFileManager *filemanager = [NSFileManager defaultManager];
